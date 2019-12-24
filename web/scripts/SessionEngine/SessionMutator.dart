@@ -96,10 +96,13 @@ class SessionMutator {
 
     //more waste tier effects in play, the more likely there will be a Cataclysm that makes everything unwinnable
     void checkForCrash(Session s) {
-        //think this through. want effect of 1 to have some of failure, and effect of 12 to be basically guaranteed
-        if (s.rand.nextInt(32) > effectsInPlay) return null;
-        s.stats.cataclysmCrash = true;
-        throw("Cataclysm Activated: Target: Session.");
+        if (s.noConsequences = false) {
+            //think this through. want effect of 1 to have some of failure, and effect of 12 to be basically guaranteed
+            if (s.rand.nextInt(32) > effectsInPlay) return null;
+            window.alert("FUCK");
+            s.stats.cataclysmCrash = true;
+            throw("Cataclysm Activated: Target: Session.");
+        }
     }
 
     ///will both be called when the hope field is activated, and in any new sessions

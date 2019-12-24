@@ -25,6 +25,7 @@ class ChangeLogMemo {
     static Wrangler tableGuardian;
     static Wrangler shogun;
     static Wrangler insufferableOracle;
+    static Wrangler poshestPotato;
 
 
 
@@ -62,7 +63,7 @@ class ChangeLogMemo {
         tableGuardian = new Wrangler("tableGuardian", "images/Credits/tg_icon$end", new Colour.fromStyleString("#ff3399"));
 
         dilletantMathematician = new Wrangler("dilletantMathematician", "images/Credits/dm_icon$end", new Colour.fromStyleString("#ff0000"));
-
+        poshestPotato = new Wrangler("poshestPotato", "images/Credits/pp_icon$end", new Colour.fromStyleString("#ff3399"));
     }
 
     List<MemoNewspost> newsposts = new List<MemoNewspost>();

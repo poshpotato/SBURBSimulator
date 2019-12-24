@@ -114,6 +114,24 @@ void sbahjMode(Session session){
 		session.activateAllCarapaces();
 	}
 
+	if (getParameterByName("populated", null) == "true") {
+		session.tableGuardianMode = false;
+	}
+
+	if (getParameterByName("consequences", null) == "none") {
+		session.noConsequences = true;
+		window.alert("UNLIMITED POWER");
+	}
+
+	if (getParameterByName("reckoning", null) == "none") {
+		if (window.confirm("hOO boy. This is definitely going to crash eventually. continue?")) {
+			session.noReckoning = true;
+			window.alert("If you say so...");
+		} else {
+			window.alert("Good.");
+		}
+	}
+
 	//ultimate showdown of ultimate destiny
 	if (getParameterByName("destiny", null) == "ultimate") {
 		session.ultimateShowdown = true;

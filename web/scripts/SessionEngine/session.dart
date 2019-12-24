@@ -32,11 +32,14 @@ class Session {
     bool tableGuardianMode = false;
     bool ultimateShowdown = false;
     bool plzStartReckoning = false;
+    bool noReckoning = false;
+    bool noConsequences = false;
     bool didReckoning = false;
     int numberPlayersOnBattlefield = 0;
 
     bool get canReckoning {
         if(tableGuardianMode) return false;
+        if(noReckoning) return false;
         int difficulty = 2;//at least half of us are done
         if(stats.crownedCarapace)difficulty = players.length; // ANY of us are down (ala canon's early reckoning)
         return numberPlayersOnBattlefield > (players.length/difficulty).round();
@@ -1348,7 +1351,7 @@ class Session {
             two things can start the reckoning: enough time passing (shenanigans launch the meteors)
             or someone having both scepters.
          */
-        if(plzStartReckoning || numTicks > SimController.instance.maxTicks || (currentSceneNum > SimController.instance.maxScenes && tableGuardianMode) ||  (findLiving(players).isEmpty && !tableGuardianMode)) {
+        if((plzStartReckoning || numTicks > SimController.instance.maxTicks || (currentSceneNum > SimController.instance.maxScenes && tableGuardianMode) ||  (findLiving(players).isEmpty && !tableGuardianMode)) && !noReckoning ) {
             if(numTicks > SimController.instance.maxTicks) stats.timeoutReckoning = true;
             this.logger.info("reckoning at ${this.timeTillReckoning} and can reckoning is ${this.canReckoning}");
             this.timeTillReckoning = 0; //might have gotten negative while we wait.
