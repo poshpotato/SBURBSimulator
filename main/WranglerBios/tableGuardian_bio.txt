@@ -1,0 +1,26 @@
+    <table class = 'bio' id = "tableGuardian">
+			<tr>
+			<td valign="top" class = 'bioPic'>
+				<div class = 'nameHeader'>tableGuardian (TG)</div>
+				<img id = 'tableGuardianAvatar' src = "images/Credits/tg.png">
+			</td>
+			<td class = 'heart rightCol'>
+				<div class = 'stat'><span class = 'statHeader'>Classpect:</span>  Heir of Heart</div>
+				<div class = 'stat'><span class = 'statHeader'>Specibus:</span> Tablekind</div>
+				<div class = 'stat'><span class = 'statHeader'>Favorite Weapon: ???</span></div>
+				<div class = 'stat'><span class = 'statHeader'>Land:</span> the Land of Suburbs and Emotion</div>
+				<div class = 'stat'><span class = 'statHeader'>Speciality:</span> Debugging and Data Entry</div>
+				<div class = 'stat'><span class = 'statHeader'>Join Date:</span> July 27th, 2017</div>
+
+
+				<div class = 'mainText'>
+
+					Before joining the Wranglers, tableGuardian played board games with a group of friends known as LEGEND. Due to unfortunate circumstances, no one else in LEGEND received their copy of SBURB, and so he entered the Wranglers.
+					<br><br>TG’s signature ability is [Be The Arms]. This allows him to convert parts of his physical body into arms made of heart-stuff. The more arms he creates, the less control he has over his physical body. These arms can be used to compel changes in pre-existing emotions of a target. It is typically used as a support ability. TG allegedly learned it from reading a book in some ruin on his land.
+					<br><br>TG likes to make his own tabletop games, make spreadsheet tables, and (on rare occasions) physically merge with tables. He also enjoys listening to music and has a strange obsession with “the final boss,” which definitely isn’t the Black King.
+					<br><br>In his spare time, TG goes through the “heart” of the sim, pointing out its flaws and allowing them to be changed. He has no idea how to write code himself like a mind player would, but knows when something feels wrong.
+
+
+				</div>			</td>
+			</tr>
+		</table>

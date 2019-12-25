@@ -1,0 +1,21 @@
+    <table class = 'bio' id = "paradoxLands">
+			<tr>
+			<td valign="top" class = 'bioPic'>
+				<div class = 'nameHeader'>paradoxLands (PL)</div>
+				<img id = 'paradoxLandsAvatar' src = "images/Credits/pl.png">
+			</td>
+			<td class = 'voidColor rightCol'>
+				<div class = 'stat'><span class = 'statHeader'>Classpect:</span> Witch of Void</div>
+				<div class = 'stat'><span class = 'statHeader'>Specibus:</span> Rodkind</div>
+				<div class = 'stat'><span class = 'statHeader'>Favorite Weapon: ???</span></div>
+				<div class = 'stat'><span class = 'statHeader'>Land:</span> The Land of Cults and Chandeliers</div>
+				<div class = 'stat'><span class = 'statHeader'>Speciality:</span> Programming and Code Design</div>
+				<div class = 'stat'><span class = 'statHeader'>Join Date:</span> June 24th, 2017</div>
+
+
+				<div class = 'mainText'>
+
+					JR Notes: PL is a v good Void Player and obscured and warped the sim's source code during the Great Refactoring.
+				</div>			</td>
+			</tr>
+		</table>

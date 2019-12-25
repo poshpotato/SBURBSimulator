@@ -1,0 +1,20 @@
+    <table class = 'bio' id = "wooMod">
+			<tr>
+			<td valign="top" class = 'bioPic'>
+				<div class = 'nameHeader'>wooMod (WM)</div>
+				<img id = 'wooModAvatar' src = "images/Credits/wm.png">
+			</td>
+			<td class = 'breath rightCol'>
+				<div class = 'stat'><span class = 'statHeader'>Classpect:</span> Muse of Breath</div>
+				<div class = 'stat'><span class = 'statHeader'>Specibus:</span> Debatekind</div>
+				<div class = 'stat'><span class = 'statHeader'>Favorite Weapon: ???</span></div>
+				<div class = 'stat'><span class = 'statHeader'>Land:</span> the Land of Lakes and Lotuses</div>
+				<div class = 'stat'><span class = 'statHeader'>Speciality:</span>Stat Balancing and Classpect Analysis</div>
+				<div class = 'stat'><span class = 'statHeader'>Join Date:</span> June 17th, 2017</div>
+
+				<div class = 'mainText'>
+
+					JR Notes: WooMod breezed in, redefined how classpects were thought of in a fundamental way, and then breezed back out.
+				</div>			</td>
+			</tr>
+		</table>

@@ -1,0 +1,21 @@
+    <table class = 'bio' id = "dilletantMathematician">
+			<tr>
+			<td class = 'bioPic'>
+				<div class = 'nameHeader'>dilletantMathematician (DM)</div>
+				<img id = 'dilletantMathematicianAvatar' src = "images/Credits/dm.png">
+			</td>
+			<td valign="top" class = 'time rightCol'>
+				<div class = 'stat'><span class = 'statHeader'>Classpect:</span> Prince of Time</div>
+				<div class = 'stat'><span class = 'statHeader'>Specibus:</span> Hammerkind</div>
+				<div class = 'stat'><span class = 'statHeader'>Favorite Weapon: ???</span></div>
+				<div class = 'stat'><span class = 'statHeader'>Land:</span> the Land of Cardboard and Grass</div>
+				<div class = 'stat'><span class = 'statHeader'>Speciality:</span> Math and Programming Advice</div>
+				<div class = 'stat'><span class = 'statHeader'>Join Date:</span> January 13th, 2017</div>
+
+
+				<div class = 'mainText'>
+
+					JR Notes:  DM hosted SBURBSim before we had our own host, and also helped with math and the occasional coding problem early on.
+				</div>			</td>
+			</tr>
+		</table>
