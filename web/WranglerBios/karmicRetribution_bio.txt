@@ -1,0 +1,29 @@
+<table class = 'bio' id = "karmicRetribution">
+			<tr>
+			<td valign="top" class = 'bioPic'>
+				<div class = 'nameHeader'>karmicRetribution (KR)</div>
+				<img id = 'karmicRetributionAvatar' src = "images/Credits/kr.png">
+			</td>
+			<td class = 'dream rightCol'>
+				<div class = 'stat'><span class = 'statHeader'>Classpect:</span> Smith of Dream</div>
+				<div class = 'stat'><span class = 'statHeader'>Specibus:</span> Craftkind</div>
+				<div class = 'stat'><span class = 'statHeader'>Favorite Weapon: Banhammer</span></div>
+				<div class = 'stat'><span class = 'statHeader'>Land:</span> The Land of Memories and Misdirection</div>
+				<div class = 'stat'><span class = 'statHeader'>Speciality:</span> Art and Auspiticsm</div>
+				<div class = 'stat'><span class = 'statHeader'>Join Date:</span> January 24th, 2017</div>
+
+
+				<div class = 'mainText'>
+
+
+					So have you ever gotten interested in a friend's project, and then thought "Oh look, there's a small thing I can help them with! It should only take a few minutes, even!" And a few weeks later you found yourself using all of your spare time to work on the project?
+					Yeah.
+<br><br>
+					Anyway, I'm karmicRetribution, Smith of Dream (because canon is for plebs), and I did most of the foundational graphics work on the sim. I try to stop JR from hate-macking on good taste so that we can all enjoy looking at the site instead of clawing our eyes out.
+<br><br>
+
+
+					Also, I accidentally enabled the Shogun's ascension. Whoops, my bad.
+				</div>			</td>
+			</tr>
+		</table>

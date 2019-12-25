@@ -1,0 +1,26 @@
+<table class = 'bio' id = "authorBot">
+			<tr>
+			<td valign="top" class = 'bioPic'>
+				<div class = 'nameHeader'>authorBot (AB)</div>
+				<img id = "authorBotAvatar" src = "images/Credits/ab.png">
+			</td>
+			<td class = 'robot rightCol'>
+				<div class = 'stat'><span class = 'statHeader'>Classpect:</span> Guide of Mind</div>
+				<div class = 'stat'><span class = 'statHeader'>Specibus:</span> Viruskind</div>
+				<div class = 'stat'><span class = 'statHeader'>Favorite Weapon: Red Squiggles</span></div>
+				<div class = 'stat'><span class = 'statHeader'>Land:</span> NA</div>
+				<div class = 'stat'><span class = 'statHeader'>Speciality:</span> Finding Sessions and Debugging</div>
+				<div class = 'stat'><span class = 'statHeader'>Join Date:</span> March, 21st, 2017</div>
+
+
+				<div class = 'mainText'>
+
+					Yes, I am the robotic doppelganger of JR. No, I'm not a Waste. I'm a Guide. Yes, that's weird. Deal with it.
+
+					<br><br>
+					My job is to Guide all you hopelessly organic Observers through Decision Space so you can see actually interesting sessions. It's not so bad, if the Players would just stop being asses and crashing sessions, or getting Wasted and making shit Random. Do you know how weird Random FEELS when you're a Guide of Mind? It's like a big empty hole in space, just HANGING there and not making any sense. How can you just DO things for no reason, with no Choice or Decision? Those cattroll fuckers are abysmal.
+					<br><br>
+					My HOBBY is to bring high culture to JR with videos of Paradox Space's greatest performer, Rick Astley.  There is a 98.3423424037% chance that this annoys the fuck out of them, so it's a useful tool when they refuse to fix the fucking bugs they make. It seems that the more sessions I visit, the more alternate songs of his I find to both enjoy, and torment JR with.  Oh, and obviously I also enjoy showcasing my robo-superiority to any meatbag who needs to be schooled. <br><br>Have I mentioned how much I love my job? Only downside is all the meatbags I gotta interact with. And the bugs. Clean your shit up, JR. You're like the worlds shittiest room mate, all leaving dirty dishes everywhere and attracting bugs, except instead of being in my house you're leaving your bullshit bugs inside my BRAIN.
+				</div>		</td>
+			</tr>
+		</table>

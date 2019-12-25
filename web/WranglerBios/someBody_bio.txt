@@ -1,0 +1,12 @@
+    <table class = 'bio' id = "someBody">
+			<tr>
+			<td class = 'bioPic'>
+				<div class = 'nameHeader'>someBody (SB)</div>
+				<img id = 'someBodyAvatar' src = "images/Credits/sb.png">
+			</td>
+			<td valign="top" class = 'juice rightCol'>
+				<div class = 'mainText'>
+					someBody helped with Dead Sessions.
+				</div>		</td>
+			</tr>
+		</table>

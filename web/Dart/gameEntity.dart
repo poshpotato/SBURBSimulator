@@ -23,8 +23,8 @@ class StatBucket {
 }
 
 class Player extends GameEntity {
-  //need to have methods to get specific sub selves out. retrive all dream selves, etc. all living dream selves....
-  List<Player> selves; //dream selves, real selves, doomed time clones, robots, heart clones, etc.
+  //need to have methods toget specific sub selves out. retrive all dream selves, etc. all living dream selves....
+List<Player> selves; //dream selves, real selves, doomed time clones, robots, heart clones, etc.
 
 }
 
