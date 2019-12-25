@@ -1,7 +1,7 @@
 import '../../navbar.dart';
 import '../../text_engine.dart';
 import 'dart:html';
-
+import '../Newsposts/MemoNewspostController.dart';
 //bare minimum for a page.
 void main() {
   loadNavbar();
@@ -45,6 +45,7 @@ void onBioLoaded(String biohtml) {
   String staff = getParameterByName("staff",null);
   if(biohtml != null) {
     querySelector("#story").setInnerHtml(biohtml, treeSanitizer: NodeTreeSanitizer.trusted);
+    doShit();
   }
   if(staff == "jadedResearcher"){
     ButtonElement button = querySelector("#layWaste") as ButtonElement;

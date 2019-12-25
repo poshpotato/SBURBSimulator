@@ -6,7 +6,6 @@ import 'dart:async';
 import "../../random.dart";
 import "ChangeLogMemo.dart";
 import "Wrangler.dart";
-import 'dart:async';
 
 
 ChangeLogMemo memo =  ChangeLogMemo.instance;
@@ -23,7 +22,11 @@ void doShit() {
   print("10ms awaited, i'm expeting this div to exist plz ${querySelector("#newspostsMain")}");
 
   ChangeLogMemo.init();
-  createNews();
+  if(getParameterByName("staff",null) != null){
+    createNewsInBio();
+  } else {
+    createNews();
+  }
   window.onScroll.listen((Event event){
     num ypos = window.scrollY; //pixels the site is scrolled down
     var visible = window.screen.height; //visible pixels
@@ -54,7 +57,6 @@ Future<Null> createNews() async{
 
 
 
-  ;
   renderNews();
 
 }
@@ -77,4 +79,16 @@ void renderNews() {
   window.console.log("the div is ${div} for rendering news");
 
   memo.render(div);
+}
+
+Future<Null> createNewsInBio() async {
+  String wrangler = getParameterByName("staff",null);
+  for(Wrangler w in Wrangler.all) {
+    window.console.log(w.chatHandle);
+    if (w.chatHandle == wrangler) {
+      window.console.log("found wrangler");
+      await w.slurpNewsposts();
+    }
+  }
+  renderNews();
 }
