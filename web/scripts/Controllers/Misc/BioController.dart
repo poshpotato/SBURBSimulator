@@ -44,7 +44,7 @@ void processShenanigans(String staff) {
 void onBioLoaded(String biohtml) {
   String staff = getParameterByName("staff",null);
   if(biohtml != null) {
-    querySelector("#story").setInnerHtml(biohtml, treeSanitizer: NodeTreeSanitizer.trusted);
+    querySelector("#story").setInnerHtml(biohtml+querySelector("#story").innerHtml, treeSanitizer: NodeTreeSanitizer.trusted);
     doShit();
   }
   if(staff == "jadedResearcher"){
