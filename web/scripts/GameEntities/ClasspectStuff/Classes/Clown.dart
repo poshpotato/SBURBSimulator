@@ -27,7 +27,7 @@ class Clown extends SBURBClass {
     
     @override
     double difficulty = 0.0;
-    Clown() : super("Clown", 21, false);
+    Clown() : super("Clown", 21, false, isInternal:true);
     @override
     List<String> levels = ["COMIC CRIMINAL", "JOURNEYING JUBALEE", "TIGER EYE"];
     @override
@@ -49,6 +49,8 @@ class Clown extends SBURBClass {
     bool isDestructive = false;
     @override
     bool isHelpful = false;
+
+    @override
 
     @override
     num modPowerBoostByClass(num powerBoost, AssociatedStat stat) {
