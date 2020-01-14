@@ -17,7 +17,6 @@
 <p>Well, it was more like "Hmm. what the fuck is this i dont understand any of it" and then I went and read a book about programming and cried. but hey! Now I look at it and think "Hmm. what if I did this.." and break something.<p>
 <br>
 <h1>Progress!</h1>
-<h3>Test</h3>
 <br>
 <br>
 <p>If you want to contact me i'm poshestpotato#3651 on discord, and a list of my changes to the sim <i>should</i> be in newsposts below. If I didn't break it again.</p>
