@@ -1502,6 +1502,7 @@ class Session {
             print("after reseting classpects, got $canonLevel");
             int numPlayers = this.rand.nextIntRange(
                 2, 12); //rand.nextIntRange(2,12);
+            print("initialising $numPlayers players");
             double special = rand.nextDouble();
 
             List<Player> replayer = getReplayers(this);
