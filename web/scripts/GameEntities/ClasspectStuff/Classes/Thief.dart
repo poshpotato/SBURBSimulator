@@ -7,7 +7,7 @@ import "../../../Lands/Quest.dart";
 class Thief extends SBURBClass {
     
     @override
-    String sauceTitle = "Vagrant";
+    String sauceTitle = "Vandal";
     
     //what sort of quests rewards do I get?
     @override
