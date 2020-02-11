@@ -384,7 +384,7 @@ void renderAfterlifeURL(Session session) {
         String params = window.location.href.substring(window.location.href.indexOf("?") + 1);
         if (params == window.location.href) params = "";
 
-        String html = "<Br><br><a href = 'rip.html?${generateURLParamsForPlayers(session.afterLife.ghosts, false)}' target='_blank'>View Afterlife In New Tab?</a>";
+        String html = "<Br><br><a href = 'rip.html?seed=${session.session_id}&${generateURLParamsForPlayers(session.afterLife.ghosts, false)}' target='_blank'>View Afterlife In New Tab?</a>";
         html = '$html<br><br><a href = "character_creator.html?seed=${session.session_id}&$params" target="_blank">Replay Session </a> ';
         html = "$html<br><br><a href = 'index2.html'>Random New Session?</a>";
         html = '$html<br><br><a href = "index2.html?seed=${session.session_id}&$params" target="_blank">Shareable URL </a> ';

@@ -2,3 +2,4 @@
 2019-12-23: Right, so, Hi! Finally got myself into the newspost system. And a bio, though thats incomplete. <br><br> Also! I've added TWO (!!!) new easter eggs. one of which crashes the session, the other of which lets people get away with far too much...
 2019-12-25: Bio revamp time! Currently, it's surface level the same- but i've changed it to only load the relevant wrangler. Cool, eh? and hey, its a chance to practice Httprequest.
 2019-12-25: And we're on main baby! visit my <a href="/bio.html?staff=poshPotato">Bio</a> for info on the few things that I've changed!<br><br>Oh! And happy holidays!
+2020-01-17: New easter egg! This one lets you customise the number of players in a session. (Is a BIT broken.)

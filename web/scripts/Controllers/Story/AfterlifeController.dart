@@ -26,11 +26,8 @@ Future<Null> main() async {
     self.initial_seed = tmp;
   }
   self.loadPlayers(session);
-  globalCallBack = self.renderGhosts;
-  ;
+  globalCallBack = self.renderGhostsPlusShenanigans;
   load(session, session.players, [], "ghostNewBullshitReallyIShouldJustBeUsingCallbackAlone");
-
-
 }
 
 /*
@@ -70,13 +67,41 @@ class AfterlifeController extends SimController {
     Drawing.copyTmpCanvasToRealCanvasAtPos(canvas, pSpriteBuffer,0,0);
   }
 
-  void renderGhosts() {
+  void renderGhostsPlusShenanigans() {
     for(int i =0; i<session.players.length; i++) {
       Player p = session.players[i];
       renderSingleGhost(p, i);
     }
+    DivElement arena = querySelector("#arena");
+    arena.append(new ButtonElement()..type="button"..id="brawlButton"..text="Brawl?");
+    ButtonElement brawlButton = querySelector("#brawlButton");
+    brawlButton.onClick.listen((_) => self.startBrawl(arena));
+
   }
 
-
+  void startBrawl(DivElement div){
+    DivElement div = querySelector("#arena");
+    if(session.players.length == 1){
+      div.text = "Shit, man. Theres only one guy here, and he cant very well fight himself.";
+      return;
+    }
+    List<GameEntity> playerTeam1 = new List<GameEntity>();
+    List<GameEntity> playerTeam2 = new List<GameEntity>();
+    List<Team> teams = new List<Team>();
+    for(int i =0; i<session.players.length; i++) {
+      Player p = session.players[i];
+      if(i%2==0){
+        playerTeam1.add(p);
+      }else{
+        playerTeam2.add(p);
+      }
+    }
+    playerTeam1.shuffle(session.rand);
+    playerTeam2.shuffle(session.rand);
+    teams.add(new Team(session, playerTeam1));
+    teams.add(new Team(session, playerTeam2));
+    Strife brawl = new Strife(session, teams);
+    brawl.startTurn(div);
+  }
 
 }

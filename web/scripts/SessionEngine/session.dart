@@ -1495,16 +1495,20 @@ class Session {
     void makePlayers() {
         logger.info("making players from seed ${rand.spawn().nextInt()}");
         this.players = <Player>[];
-        if(tableGuardianMode) {
+        if(tableGuardianMode ) {
             activateAllCarapaces();
         }else{
             resetAvailableClasspects();
             print("after reseting classpects, got $canonLevel");
             int numPlayers = this.rand.nextIntRange(
                 2, 12); //rand.nextIntRange(2,12);
+            if (getParameterByName("playerCrowd", null) != null) {
+                String holder1 = getParameterByName("playerCrowd", null);
+                int holder2 = int.parse(holder1);
+                numPlayers = holder2;
+            }
             print("initialising $numPlayers players");
             double special = rand.nextDouble();
-
             List<Player> replayer = getReplayers(this);
             if (replayer.isEmpty) {
                 this.players.add(randomSpacePlayer(this));

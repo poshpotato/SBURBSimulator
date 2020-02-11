@@ -1,5 +1,6 @@
 import "dart:async";
 import "dart:html";
+import "dart:js";
 import "NonCanonSessions.dart";
 
 import "../SBURBSim.dart";
@@ -130,6 +131,10 @@ void sbahjMode(Session session){
 		} else {
 			window.alert("Good.");
 		}
+	}
+
+	if (getParameterByName("playerCrowd", null) != null) {
+		///this is handled in session.dart. Trust me, its easier.
 	}
 
 	//ultimate showdown of ultimate destiny
