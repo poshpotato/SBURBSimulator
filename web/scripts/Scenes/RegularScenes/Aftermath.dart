@@ -171,7 +171,7 @@ class Aftermath extends Scene {
         if (doNotRender) return;
         var divID = (div.id) + "_${dead_player.id}";
 
-        CanvasElement canvasDiv = new CanvasElement(width: canvasWidth, height: canvasHeight);
+        CanvasElement canvasDiv = new CanvasElement(width: canvasWidth, height: canvasHeight)..id="poseDiv";
         div.append(canvasDiv);
 
         var pSpriteBuffer = Drawing.getBufferCanvas(SimController.spriteTemplateWidth, SimController.spriteTemplateHeight);
@@ -295,7 +295,7 @@ class Aftermath extends Scene {
                 end += " No universe frog, no new universe to live in. Thems the breaks. ";
             }else if(spacePlayer.land == null || spacePlayer.land.dead) {
                 end += " The Players realize, far too late, that with the destruction of the ${spacePlayer.htmlTitle()}'s land, there is no more Forge in which to deploy the Ultimate Frog. ";
-                session.stats.brokenForge = true;
+                session.stats.brokenForge = true; //TODO PP:make ab report this
             }else if (!session.enoughGristForAny()) {
                 ////session.logger.info("AB:  Not enough grist for any frog in session ${session.session_id}");
 
@@ -347,8 +347,9 @@ class Aftermath extends Scene {
         //String divID = (div.id) + "_aftermath" ;
         processBigBadEndings();
 
-
-        //poseAsATeam(canvasDiv, this.session.players, 2000); //everybody, even corpses, pose as a team.
+        CanvasElement canvasDiv = new CanvasElement();
+        div.append(canvasDiv);
+        Drawing.poseAsATeam(canvasDiv, this.session.players); //everybody, even corpses, pose as a team. //TODO figure uot  how this works and fix it, looks cool.
         this.lastRender(div);
         if (yellowYard == true || this.session.janusReward) {
             this.yellowLawnRing(div); //can still scratch, even if yellow lawn ring is available

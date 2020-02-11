@@ -274,6 +274,7 @@ String playersToDataStrings(players, includeChatHandle){
 
 
 //pair with seed for shareable url for character creator, or pair with nothing for afterlife viewer.
+//Posh here: FUCK that let the afterlife have a seed too
 String generateURLParamsForPlayers(List<Player>players, bool includeChatHandle){
   //var json = JSON.stringify(players);  //inside of players handles looking for keys
   ////print(json);

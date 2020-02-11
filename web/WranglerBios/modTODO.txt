@@ -16,3 +16,7 @@ Add Frogs
 Valhalla
     -We make ghosts fight it out and get stronger and stronger (maybe rewards?)
     -X matches sort of thing, slider like AB
+
+
+Misc
+    -Make AB report broken forge
