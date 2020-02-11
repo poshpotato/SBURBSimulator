@@ -171,7 +171,7 @@ class Aftermath extends Scene {
         if (doNotRender) return;
         var divID = (div.id) + "_${dead_player.id}";
 
-        CanvasElement canvasDiv = new CanvasElement(width: canvasWidth, height: canvasHeight)..id="poseDiv";
+        CanvasElement canvasDiv = new CanvasElement(width: canvasWidth, height: canvasHeight);
         div.append(canvasDiv);
 
         var pSpriteBuffer = Drawing.getBufferCanvas(SimController.spriteTemplateWidth, SimController.spriteTemplateHeight);
@@ -346,10 +346,6 @@ class Aftermath extends Scene {
         appendHtml(div, end);
         //String divID = (div.id) + "_aftermath" ;
         processBigBadEndings();
-
-        CanvasElement canvasDiv = new CanvasElement();
-        div.append(canvasDiv);
-        Drawing.poseAsATeam(canvasDiv, this.session.players); //everybody, even corpses, pose as a team. //TODO figure uot  how this works and fix it, looks cool.
         this.lastRender(div);
         if (yellowYard == true || this.session.janusReward) {
             this.yellowLawnRing(div); //can still scratch, even if yellow lawn ring is available
@@ -359,6 +355,9 @@ class Aftermath extends Scene {
         if(!session.stats.makeCombinedSession) {
             session.simulationComplete("Aftermath, not eligible for a combo.");
         }
+        CanvasElement canvasDiv = new CanvasElement(width: canvasWidth, height: canvasHeight);
+        div.append(canvasDiv);
+        Drawing.poseAsATeam(canvasDiv, this.session.players); //everybody, even corpses, pose as a team. //TODO figure uot  how this works and fix it, looks cool.
         return null;
     }
 
