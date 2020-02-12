@@ -6,6 +6,7 @@ import 'dart:async';
 
 AfterlifeController self;
 Session session;
+DivElement brawlArena = querySelector("#arena");
 
 Future<Null> main() async {
   window.onError.listen((Event event){
@@ -73,16 +74,24 @@ class AfterlifeController extends SimController {
       renderSingleGhost(p, i);
     }
     DivElement arena = querySelector("#arena");
-    arena.append(new ButtonElement()..type="button"..id="brawlButton"..text="Brawl?");
-    ButtonElement brawlButton = querySelector("#brawlButton");
-    brawlButton.onClick.listen((_) => self.startBrawl(arena));
+    renderValhallaButtons(arena);
+  }
 
+  void renderValhallaButtons(DivElement arena){
+    arena.append(new ButtonElement()..type="button"..id="playerBrawlButton"..text="Pit the players against one another?");
+    ButtonElement playerBrawlButton = querySelector("#playerBrawlButton");
+    playerBrawlButton.onClick.listen((_) => self.startBrawl(arena));
+    arena.append(new ButtonElement()..type="button"..id="enemyVsBrawlButton"..text="Pit the players against equal foes in Glorious Combat?");
+    ButtonElement enemyVsBrawlButton = querySelector("#enemyVsBrawlButton");
+    enemyVsBrawlButton.onClick.listen((_) => self.brawlWithEnemies(arena));
   }
 
   void startBrawl(DivElement div){
     DivElement div = querySelector("#arena");
     if(session.players.length == 1){
-      div.text = "Shit, man. Theres only one guy here, and he cant very well fight himself.";
+      div.text = "Shit, man. Theres only one kid here, and they cant very well fight themself.";
+      div.text += " Although... Perhaps valhalla has a challenge for them? A one on one fight should cheer them right up!";
+      brawlWithEnemy(div);
       return;
     }
     List<GameEntity> playerTeam1 = new List<GameEntity>();
@@ -102,6 +111,60 @@ class AfterlifeController extends SimController {
     teams.add(new Team(session, playerTeam2));
     Strife brawl = new Strife(session, teams);
     brawl.startTurn(div);
+  }
+
+  GameEntity genEnemyOneOnOne(GameEntity fighter){
+    print("TEST MOBILITY: " + fighter.getStat(Stats.MOBILITY).toString());
+    GameEntity enemy = new GameEntity(Zalgo.generate("ValhallaEnemy"), session);
+    Map<Stat, num> tmpStatHolder = {};
+    tmpStatHolder[Stats.MIN_LUCK] = fighter.getStat(Stats.MIN_LUCK);
+    tmpStatHolder[Stats.MAX_LUCK] = fighter.getStat(Stats.MAX_LUCK);
+    tmpStatHolder[Stats.CURRENT_HEALTH] = fighter.getStat(Stats.HEALTH);
+    tmpStatHolder[Stats.HEALTH] = fighter.getStat(Stats.HEALTH);
+    tmpStatHolder[Stats.MOBILITY] = fighter.getStat(Stats.MOBILITY);
+    tmpStatHolder[Stats.SANITY] = 0;
+    tmpStatHolder[Stats.FREE_WILL] = 0;
+    tmpStatHolder[Stats.POWER] = fighter.getStat(Stats.POWER); //this will be a challenge.
+    tmpStatHolder[Stats.GRIST] = 0;
+    tmpStatHolder[Stats.RELATIONSHIPS] = -100;
+    enemy.stats.setMap(tmpStatHolder);
+    return enemy;
+  }
+
+  void brawlWithEnemy(DivElement div){
+    Player mvp = findStrongestPlayer(session.players);
+    List<GameEntity> team1 = new List();
+    List<GameEntity> team2 = new List();
+    List<Team> teams = new List();
+    team1.add(mvp);
+    team2.add(genEnemyOneOnOne(mvp));
+    teams.add(new Team(session, team1));
+    teams.add(new Team(session, team2));
+    Strife strife = new Strife(session, teams);
+    strife.startTurn(div);
+  }
+
+  void brawlWithEnemies(DivElement div){
+    List<GameEntity> team1 = new List();
+    List<GameEntity> team2 = new List();
+    List<Team> teams = new List();
+    for(int i=0; i<session.players.length; i++) {
+      Player p = session.players[i];
+      team1.add(p);
+      team2.add(genEnemyOneOnOne(p));
+    }
+    teams.add(new Team(session, team1));
+    teams.add(new Team(session, team2));
+    Strife strife = new Strife(session, teams);
+    strife.startTurn(div);
+  }
+
+  void healPlayers(){
+    for(int i=0; i<session.players.length; i++) {
+      Player p = session.players[i];
+      p.makeAlive();
+      p.heal();
+    }
   }
 
 }
