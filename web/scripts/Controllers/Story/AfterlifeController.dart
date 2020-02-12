@@ -94,6 +94,7 @@ class AfterlifeController extends SimController {
       brawlWithEnemy(div);
       return;
     }
+    healPlayers();
     List<GameEntity> playerTeam1 = new List<GameEntity>();
     List<GameEntity> playerTeam2 = new List<GameEntity>();
     List<Team> teams = new List<Team>();
@@ -132,6 +133,7 @@ class AfterlifeController extends SimController {
   }
 
   void brawlWithEnemy(DivElement div){
+    healPlayers();
     Player mvp = findStrongestPlayer(session.players);
     List<GameEntity> team1 = new List();
     List<GameEntity> team2 = new List();
@@ -145,6 +147,7 @@ class AfterlifeController extends SimController {
   }
 
   void brawlWithEnemies(DivElement div){
+    healPlayers();
     List<GameEntity> team1 = new List();
     List<GameEntity> team2 = new List();
     List<Team> teams = new List();
