@@ -64,13 +64,13 @@ class Strife {
         div = innerDiv;
         teams.sort(); //we do this every turn because mobility can change and should effect turn order.
         for (Team team in teams) {
-            session.logger.info("it's $team's turn. living is ${team.getLiving()}");
+            //session.logger.info("it's $team's turn. living is ${team.getLiving()}");
             team.takeTurn(div, turnsPassed, teams); //will handling resetting player availablity
         }
         checkForSuddenEnding(div); //everyone is killed. or absconded in denizen case. calls processEnding on own.
         bool over = strifeEnded();
         if (over || strifeIsOver) {
-            session.logger.info("I think the strife is over after $turnsPassed turns");
+            //session.logger.info("I think the strife is over after $turnsPassed turns");
             Team winner = findWinningTeam();
             if (winner != null) {
                 winner.won = true;
@@ -167,7 +167,7 @@ class Strife {
                 } // two or more teams still alive
             }
         }
-        session.logger.info("${toString()} I think the strife is over, because living teams is $living.");
+        //session.logger.info("${toString()} I think the strife is over, because living teams is $living.");
         return living < 2;
     }
 

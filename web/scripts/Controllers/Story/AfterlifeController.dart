@@ -37,7 +37,8 @@ Future<Null> main() async {
 class AfterlifeController extends SimController {
 
   List<Player> players;
-
+  int playerWins = 0;
+  int valWins = 0;
 
   AfterlifeController() : super();
 
@@ -80,6 +81,7 @@ class AfterlifeController extends SimController {
 
   void renderVal(DivElement controlPanel){
     controlPanel.append(new ImageElement()..src="images/Credits/val.png"..id="valPic");
+    controlPanel.append(new DivElement()..id="valComments"..innerHtml="<p>Welcome to my corner of the afterlife! Have a seat and watch me lay the smackdown on these chumps.</p>");
     controlPanel.append(new ButtonElement()..type="button"..id="playerBrawlButton"..className="controlButton"..text="Pit the players against one another?");
     ButtonElement playerBrawlButton = querySelector("#playerBrawlButton");
     playerBrawlButton.onClick.listen((_) => self.startBrawl(brawlArena));
@@ -124,17 +126,16 @@ class AfterlifeController extends SimController {
   }
 
   GameEntity genEnemyOneOnOne(GameEntity fighter){
-    print("TEST MOBILITY: " + fighter.getStat(Stats.MOBILITY).toString());
     GameEntity enemy = new GameEntity(" Val's First Hope Underling", session);
     Map<Stat, num> tmpStatHolder = {};
     tmpStatHolder[Stats.MIN_LUCK] = 0;
     tmpStatHolder[Stats.MAX_LUCK] = 0;
-    tmpStatHolder[Stats.CURRENT_HEALTH] = fighter.getStat(Stats.CURRENT_HEALTH, true)*2;
-    tmpStatHolder[Stats.HEALTH] = fighter.getStat(Stats.HEALTH, true)*2;
+    tmpStatHolder[Stats.CURRENT_HEALTH] = fighter.getStat(Stats.CURRENT_HEALTH, true);
+    tmpStatHolder[Stats.HEALTH] = fighter.getStat(Stats.HEALTH, true);
     tmpStatHolder[Stats.MOBILITY] = fighter.getStat(Stats.MOBILITY, true)-100;
     tmpStatHolder[Stats.SANITY] = 0;
     tmpStatHolder[Stats.FREE_WILL] = 0;
-    tmpStatHolder[Stats.POWER] = fighter.getStat(Stats.POWER, true)/2; //this will be a challenge.
+    tmpStatHolder[Stats.POWER] = fighter.getStat(Stats.POWER, true)*1.1; //this will be a challenge.
     tmpStatHolder[Stats.GRIST] = 0;
     tmpStatHolder[Stats.RELATIONSHIPS] = -100;
     enemy.stats.setMap(tmpStatHolder);
@@ -169,6 +170,12 @@ class AfterlifeController extends SimController {
     teams.add(new Team(session, team2));
     Strife strife = new Strife(session, teams);
     strife.startTurn(div);
+    if(strife.findWinningTeam() != team1){
+      playerWins++;
+    } else {
+      valWins++;
+    }
+    renderValComments(strife);
   }
 
   void prepareForBrawl(){
@@ -186,6 +193,33 @@ class AfterlifeController extends SimController {
     for(int i=0; i<numToStrife; i++){
       brawlWithEnemies(brawlArena);
     }
+  }
+
+  void renderValComments(Strife strifeToComment){
+    DivElement commentElement = querySelector("#valComments");
+    String comment = "<p>Welcome to my corner of the afterlife! Have a seat and watch me lay the smackdown on these chumps.</p>";
+    comment += "<p>So far, I've beaten these guys $valWins times and they've beaten me $playerWins times.";
+    if(playerWins > valWins){
+      if(playerWins > valWins+20){
+        comment += " Goddammit, I really need to up my game</p>";
+      } else {
+        comment += " They're doing quite well, honestly.</p>";
+      }
+    } else if(valWins < playerWins) {
+      if(valWins < playerWins + 20) {
+        comment += " This is just sad, AB play Two Universes.</p>";
+      } else {
+        comment += " Cmon kids, you can do better than that.</p>";
+      }
+    }
+    print(strifeToComment.findWinningTeam().getLiving());
+    print(strifeToComment.findWinningTeam().members);
+    print(strifeToComment.findWinningTeam().getLiving() == strifeToComment.findWinningTeam().members);
+    if(strifeToComment.turnsPassed > 3){
+      comment += "<p>Hoo boy, that was a  long fight. $strifeToComment.turnsPassed turns! If only they were all like that.</p>";
+    }
+
+    commentElement.innerHtml = comment;
   }
 
 }
