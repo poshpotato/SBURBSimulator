@@ -94,7 +94,7 @@ class AfterlifeController extends SimController {
       brawlWithEnemy(div);
       return;
     }
-    healPlayers();
+    prepareForBrawl();
     List<GameEntity> playerTeam1 = new List<GameEntity>();
     List<GameEntity> playerTeam2 = new List<GameEntity>();
     List<Team> teams = new List<Team>();
@@ -116,16 +116,16 @@ class AfterlifeController extends SimController {
 
   GameEntity genEnemyOneOnOne(GameEntity fighter){
     print("TEST MOBILITY: " + fighter.getStat(Stats.MOBILITY).toString());
-    GameEntity enemy = new GameEntity(Zalgo.generate("ValhallaEnemy"), session);
+    GameEntity enemy = new GameEntity("ValhallaEnemy", session);
     Map<Stat, num> tmpStatHolder = {};
-    tmpStatHolder[Stats.MIN_LUCK] = fighter.getStat(Stats.MIN_LUCK);
-    tmpStatHolder[Stats.MAX_LUCK] = fighter.getStat(Stats.MAX_LUCK);
-    tmpStatHolder[Stats.CURRENT_HEALTH] = fighter.getStat(Stats.HEALTH);
-    tmpStatHolder[Stats.HEALTH] = fighter.getStat(Stats.HEALTH);
-    tmpStatHolder[Stats.MOBILITY] = fighter.getStat(Stats.MOBILITY);
+    tmpStatHolder[Stats.MIN_LUCK] = 0;
+    tmpStatHolder[Stats.MAX_LUCK] = 0;
+    tmpStatHolder[Stats.CURRENT_HEALTH] = fighter.getStat(Stats.CURRENT_HEALTH, true);
+    tmpStatHolder[Stats.HEALTH] = fighter.getStat(Stats.HEALTH, true);
+    tmpStatHolder[Stats.MOBILITY] = fighter.getStat(Stats.MOBILITY, true)-100;
     tmpStatHolder[Stats.SANITY] = 0;
     tmpStatHolder[Stats.FREE_WILL] = 0;
-    tmpStatHolder[Stats.POWER] = fighter.getStat(Stats.POWER); //this will be a challenge.
+    tmpStatHolder[Stats.POWER] = fighter.getStat(Stats.POWER, true); //this will be a challenge.
     tmpStatHolder[Stats.GRIST] = 0;
     tmpStatHolder[Stats.RELATIONSHIPS] = -100;
     enemy.stats.setMap(tmpStatHolder);
@@ -133,7 +133,7 @@ class AfterlifeController extends SimController {
   }
 
   void brawlWithEnemy(DivElement div){
-    healPlayers();
+    prepareForBrawl();
     Player mvp = findStrongestPlayer(session.players);
     List<GameEntity> team1 = new List();
     List<GameEntity> team2 = new List();
@@ -147,7 +147,7 @@ class AfterlifeController extends SimController {
   }
 
   void brawlWithEnemies(DivElement div){
-    healPlayers();
+    prepareForBrawl();
     List<GameEntity> team1 = new List();
     List<GameEntity> team2 = new List();
     List<Team> teams = new List();
@@ -162,9 +162,12 @@ class AfterlifeController extends SimController {
     strife.startTurn(div);
   }
 
-  void healPlayers(){
+  void prepareForBrawl(){
     for(int i=0; i<session.players.length; i++) {
       Player p = session.players[i];
+      if(p.dead = true){
+        p.increasePower();
+      }
       p.makeAlive();
       p.heal();
     }
