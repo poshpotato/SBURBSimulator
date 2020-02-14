@@ -75,16 +75,24 @@ class AfterlifeController extends SimController {
     }
     DivElement arena = querySelector("#arena");
     DivElement controlPanel = querySelector("#controlPanel");
-    renderValhallaButtons(controlPanel);
+    renderVal(controlPanel);
   }
 
-  void renderValhallaButtons(DivElement controlPanel){
-    controlPanel.append(new ButtonElement()..type="button"..id="playerBrawlButton"..text="Pit the players against one another?");
+  void renderVal(DivElement controlPanel){
+    controlPanel.append(new ImageElement()..src="images/Credits/val.png"..id="valPic");
+    controlPanel.append(new ButtonElement()..type="button"..id="playerBrawlButton"..className="controlButton"..text="Pit the players against one another?");
     ButtonElement playerBrawlButton = querySelector("#playerBrawlButton");
     playerBrawlButton.onClick.listen((_) => self.startBrawl(brawlArena));
-    controlPanel.append(new ButtonElement()..type="button"..id="enemyVsBrawlButton"..text="Pit the players against equal foes in Glorious Combat?");
+    controlPanel.append(new ButtonElement()..type="button"..id="enemyVsBrawlButton"..className="controlButton"..text="Pit the players against equal foes in Glorious Combat?");
     ButtonElement enemyVsBrawlButton = querySelector("#enemyVsBrawlButton");
     enemyVsBrawlButton.onClick.listen((_) => self.brawlWithEnemies(brawlArena));
+    controlPanel.append(new DivElement()..id="multiBattleDiv");
+    DivElement multiDiv = querySelector("#multiBattleDiv");
+    controlPanel.append(new InputElement()..type="number"..className="multiButton"..id="numMultiStrifeBox"..min="1"..max="50"..value="7");
+    InputElement numMultiStrifeBox = querySelector("#numMultiStrifeBox");
+    controlPanel.append(new ButtonElement()..type="button"..id="multiEnemyVsBrawlButton"..className="multiButton"..text="Pit the players against equal foes in Glorious Combat multiple times?");
+    ButtonElement multiEnemyVsBrawlButton = querySelector("#multiEnemyVsBrawlButton");
+    multiEnemyVsBrawlButton.onClick.listen((_) => self.brawlWithEnemiesMulti(int.parse(numMultiStrifeBox.value)));
   }
 
   void startBrawl(DivElement div){
@@ -117,16 +125,16 @@ class AfterlifeController extends SimController {
 
   GameEntity genEnemyOneOnOne(GameEntity fighter){
     print("TEST MOBILITY: " + fighter.getStat(Stats.MOBILITY).toString());
-    GameEntity enemy = new GameEntity("ValhallaEnemy", session);
+    GameEntity enemy = new GameEntity(" Val's First Hope Underling", session);
     Map<Stat, num> tmpStatHolder = {};
     tmpStatHolder[Stats.MIN_LUCK] = 0;
     tmpStatHolder[Stats.MAX_LUCK] = 0;
-    tmpStatHolder[Stats.CURRENT_HEALTH] = fighter.getStat(Stats.CURRENT_HEALTH, true);
-    tmpStatHolder[Stats.HEALTH] = fighter.getStat(Stats.HEALTH, true);
+    tmpStatHolder[Stats.CURRENT_HEALTH] = fighter.getStat(Stats.CURRENT_HEALTH, true)*2;
+    tmpStatHolder[Stats.HEALTH] = fighter.getStat(Stats.HEALTH, true)*2;
     tmpStatHolder[Stats.MOBILITY] = fighter.getStat(Stats.MOBILITY, true)-100;
     tmpStatHolder[Stats.SANITY] = 0;
     tmpStatHolder[Stats.FREE_WILL] = 0;
-    tmpStatHolder[Stats.POWER] = fighter.getStat(Stats.POWER, true); //this will be a challenge.
+    tmpStatHolder[Stats.POWER] = fighter.getStat(Stats.POWER, true)/2; //this will be a challenge.
     tmpStatHolder[Stats.GRIST] = 0;
     tmpStatHolder[Stats.RELATIONSHIPS] = -100;
     enemy.stats.setMap(tmpStatHolder);
@@ -171,6 +179,12 @@ class AfterlifeController extends SimController {
       }
       p.makeAlive();
       p.heal();
+    }
+  }
+
+  void brawlWithEnemiesMulti(int numToStrife){
+    for(int i=0; i<session.players.length; i++){
+      brawlWithEnemies(brawlArena);
     }
   }
 

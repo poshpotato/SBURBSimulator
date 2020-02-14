@@ -240,7 +240,18 @@
 	padding: 10px;
 }
 
+.controlButton{
+    display: block;
+}
 
+.multiButton{
+    display: inline;
+}
+
+#valPic{
+    height: 400px;
+    width: auto;
+}
 
 
 
