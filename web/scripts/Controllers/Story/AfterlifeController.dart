@@ -183,7 +183,7 @@ class AfterlifeController extends SimController {
   }
 
   void brawlWithEnemiesMulti(int numToStrife){
-    for(int i=0; i<session.players.length; i++){
+    for(int i=0; i<numToStrife; i++){
       brawlWithEnemies(brawlArena);
     }
   }
