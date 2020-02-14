@@ -74,16 +74,17 @@ class AfterlifeController extends SimController {
       renderSingleGhost(p, i);
     }
     DivElement arena = querySelector("#arena");
-    renderValhallaButtons(arena);
+    DivElement controlPanel = querySelector("#controlPanel");
+    renderValhallaButtons(controlPanel);
   }
 
-  void renderValhallaButtons(DivElement arena){
-    arena.append(new ButtonElement()..type="button"..id="playerBrawlButton"..text="Pit the players against one another?");
+  void renderValhallaButtons(DivElement controlPanel){
+    controlPanel.append(new ButtonElement()..type="button"..id="playerBrawlButton"..text="Pit the players against one another?");
     ButtonElement playerBrawlButton = querySelector("#playerBrawlButton");
-    playerBrawlButton.onClick.listen((_) => self.startBrawl(arena));
-    arena.append(new ButtonElement()..type="button"..id="enemyVsBrawlButton"..text="Pit the players against equal foes in Glorious Combat?");
+    playerBrawlButton.onClick.listen((_) => self.startBrawl(brawlArena));
+    controlPanel.append(new ButtonElement()..type="button"..id="enemyVsBrawlButton"..text="Pit the players against equal foes in Glorious Combat?");
     ButtonElement enemyVsBrawlButton = querySelector("#enemyVsBrawlButton");
-    enemyVsBrawlButton.onClick.listen((_) => self.brawlWithEnemies(arena));
+    enemyVsBrawlButton.onClick.listen((_) => self.brawlWithEnemies(brawlArena));
   }
 
   void startBrawl(DivElement div){
