@@ -696,11 +696,11 @@ class Team implements Comparable<Team> {
         return ret;
     }
 
-    static num getTeamsStatTotal(List<Team> teams, Stat statName) {
+    static num getTeamsStatTotal(List<Team> teams, Stat statName, [bool baseStats = false]) {
         num ret = 0;
         for (Team team in teams) {
             //team.members.first.session.logger.info("getting $statName for team ${team.name}");
-            ret += (statName.total(team.members));
+            ret += (statName.total(team.members, baseStats));
         }
         return ret;
     }
