@@ -39,6 +39,7 @@ export "Lands/BattleField.dart";
 export "Lands/FeatureFactory.dart";
 export "SessionEngine/session.dart";
 export "SessionEngine/DeadSession.dart";
+export "SessionEngine/VoidSession.dart";
 export "SessionEngine/SessionSummaryLib.dart";
 export "FAQEngine/FAQFile.dart";
 export "FAQEngine/GeneratedFAQ.dart";
