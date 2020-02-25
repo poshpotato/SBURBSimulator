@@ -27,6 +27,7 @@ class ChangeLogMemo {
     static Wrangler insufferableOracle;
     static Wrangler poshPotato;
     static Wrangler enamoredEncoding;
+    static Wrangler wizardlyLogger;
 
 
 
@@ -64,8 +65,11 @@ class ChangeLogMemo {
         tableGuardian = new Wrangler("tableGuardian", "images/Credits/tg_icon$end", new Colour.fromStyleString("#ff3399"));
 
         dilletantMathematician = new Wrangler("dilletantMathematician", "images/Credits/dm_icon$end", new Colour.fromStyleString("#ff0000"));
+
         poshPotato = new Wrangler("poshPotato", "images/Credits/pp_icon$end", new Colour.fromStyleString("#ff3399"));
-        enamoredEncoding = new Wrangler("enamoredEncoding", null, new Colour.fromStyleString("#FFFFFF"));
+        enamoredEncoding = new Wrangler("enamoredEncoding", null, new Colour.fromStyleString("#f78123"));
+        wizardlyLogger = new Wrangler("wizardlyLogger", null, new Colour.fromStyleString("#000000"));
+
     }
 
     List<MemoNewspost> newsposts = new List<MemoNewspost>();

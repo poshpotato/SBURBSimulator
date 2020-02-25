@@ -86,6 +86,16 @@
     background: #8E1516;
     color: #FF2106;
 }
+.light{
+    background: #e5661e;
+    color: #f7f95d;
+}
+
+.mist{
+    /*@wl, change this if it's bad i havent tested it*/
+    background: #91d1eb
+    color: #000000
+}
 
 .voidColor{
     background: #033476;

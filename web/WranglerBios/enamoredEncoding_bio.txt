@@ -1,0 +1,22 @@
+		<table class = 'bio' id = "enamoredEncoding">
+			<tr>
+				<td valign="top" class = 'bioPic'>
+					<div class = 'nameHeader'>enamoredEncoding (Kazoo)</div>
+					<img id = "enamoredEncodingAvatar" src = "images/Credits/ee.png">
+</td>
+<td class = 'light rightCol'>
+<div class = 'stat'><span class = 'statHeader'>Classpect:</span> Rogue of Light</div>
+<div class = 'stat'><span class = 'statHeader'>Specibus:</span> WtngUtslkind, Dicekind</div>
+<div class = 'stat'><span class = 'statHeader'>Favorite Weapon:</span> Shitty Fruit Dice </div>
+<div class = 'stat'><span class = 'statHeader'>Land:</span> LOSAC</div>
+<div class = 'stat'><span class = 'statHeader'>Speciality:</span> Enabling poor decisions</div>
+<div class = 'stat'><span class = 'statHeader'>Join Date:</span> February 24, 2020</div>
+<div class = 'mainText'>
+<br>
+<p>i bring to the table an overuse of exclamation points, a knowledge of coding that dates back to sophomore-year compsci, and photoshop.<p>
+<br>
+<br>
+<p>if you wanna yell, contact me on discord at fffnzzzfffff#9372 (i cant spell it either) or by speaking my name aloud deep within your worst recurring dream.</p>
+</div></td>
+</tr>
+</table>

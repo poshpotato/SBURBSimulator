@@ -1,0 +1,20 @@
+		<table class = 'bio' id = "wizardlyLogger">
+			<tr>
+				<td valign="top" class = 'bioPic'>
+					<div class = 'nameHeader'>wizardlyLogger (WL)</div>
+					<img id = "wizardlyLoggerAvatar" src = "images/Credits/wl.png">
+</td>
+<td class = 'mist rightCol'>
+<div class = 'stat'><span class = 'statHeader'>Classpect:</span> Scout of Mist</div>
+<div class = 'stat'><span class = 'statHeader'>Specibus:</span> </div>
+<div class = 'stat'><span class = 'statHeader'>Favorite Weapon:</span> </div>
+<div class = 'stat'><span class = 'statHeader'>Land:</span> LOWAE</div>
+<div class = 'stat'><span class = 'statHeader'>Speciality:</span> chaos</div>
+<div class = 'stat'><span class = 'statHeader'>Join Date:</span> February 24, 2020</div>
+<div class = 'mainText'>
+<p>EE: wl is also here, causing chaos and doing code things!</p>
+<br>
+
+</div></td>
+</tr>
+</table>
