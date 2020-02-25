@@ -39,6 +39,7 @@
       <a href="ocGenerator.html">Random OC Generator</a>
       <a href="ocQuiz.html">Your Story</a>
 <a href="https://mostlikely-human.github.io/SBURBSimulator/main/web/index2.html">MLH SBURBSim Mod</a>
+<a href = 'https://poshpotato.github.io/SNRUBSimulatormain/web/'>poshestPotato SBURBSim Mod</a>
 <a href="ocQuiz.html">Your Story</a>
 
       <a href="credits.html">Special Thanks</a>
@@ -57,7 +58,7 @@
     </div>
   </li>
 
-  <li class = "menuButtonPureCSS"><a href="https://discord.gg/KPunMPc">DISCORD</a></li>
+  <li class = "menuButtonPureCSS"><a href="https://discord.gg/N5WEdC8">DISCORD</a></li>
   <li class = "menuButtonPureCSS"><a href="http://www.patreon.com/FarragoFiction">SUPPORT</a></li>
   <li class="dropdown menuButtonPureCSS">
     <a href="javascript:void(0)" class="dropbtn">???</a>
