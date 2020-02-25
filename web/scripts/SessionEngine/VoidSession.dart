@@ -125,17 +125,19 @@ class VoidSession extends Session {
             await tick(); //NOW start ticking
             return;
         }
-        VoidIntro s = new VoidIntro(this);
+        IntroNew s = new IntroNew(this);
         Player p = this.players[player_index];
-        //var playersInMedium = this.players.slice(0, player_index+1); //anybody past me isn't in the medium, yet.
+        //
+
+        //var playersInMedium = curSessionGlobalVar.players.slice(0, player_index+1); //anybody past me isn't in the medium, yet.
         List<Player> playersInMedium = this.players.sublist(0, player_index + 1);
-        s.trigger(<Player>[p]);
-        s.renderContent(this.newScene(s.runtimeType.toString())); //new scenes take care of displaying on their own.
+        s.trigger(playersInMedium, p);
+        s.renderContent(this.newScene(s.runtimeType.toString()), player_index); //new scenes take care of displaying on their own.
         this.processScenes(playersInMedium);
         //player_index += 1;
         //new Timer(new Duration(milliseconds: 10), () => callNextIntro(player_index)); //sweet sweet async
         SimController.instance.gatherStats(this);
-        await tick();
+        await window.requestAnimationFrame((num t) => callNextIntro(player_index + 1));
     }
 
 
