@@ -79,6 +79,31 @@ class VoidSession extends Session {
     }
 
     @override
+    Future<Null> intro() async {
+        //
+
+        SimController.instance.initGatherStats();
+
+        //advertisePatreon(SimController.instance.storyElement);
+        //
+        List<String> playerTitlesWithTag = new List<String>();
+        for(Player p in this.players) {
+            p.handleSubAspects();
+            playerTitlesWithTag.add(p.htmlTitleWithTip());
+        }
+
+        List<String> npcsWithTag = new List<String>();
+        for(GameEntity g in this.activatedNPCS) {
+            npcsWithTag.add(g.htmlTitleWithTip());
+        }
+
+
+        appendHtml(SimController.instance.storyElement, "<Br><br>Game ${session_id} of  SBURB has been initiated. All prepare for the arrival of ${turnArrayIntoHumanSentence(playerTitlesWithTag)}. The ${turnArrayIntoHumanSentence(npcsWithTag)} seem to be especially anticipating them.<br><br>Something feels... Off about this session.<br><br>");
+        processBigBadIntros();
+        await callNextIntro(0);
+    }
+
+    @override
     void easterEggCallBack() {
         VoidSession vs = (this as VoidSession);
         //initializePlayers(this.players, this); //will take care of overriding players if need be.
@@ -211,13 +236,15 @@ class VoidSession extends Session {
 
     @override
     void makeGuardians() {
-        players[0].makeGuardian();
+        for(Player p in players){
+            p.makeGuardian();
+        }
     }
 
-    @override
+    /*@override
     String convertPlayerNumberToWords() {
         return "ONE";
-    }
+    }*/
 
     @override
     void randomizeEntryOrder() {
