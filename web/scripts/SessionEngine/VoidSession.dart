@@ -150,7 +150,7 @@ class VoidSession extends Session {
             await tick(); //NOW start ticking
             return;
         }
-        IntroNew s = new IntroNew(this);
+        IntroVoid s = new IntroVoid(this);
         Player p = this.players[player_index];
         //
 
