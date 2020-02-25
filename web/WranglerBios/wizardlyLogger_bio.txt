@@ -6,13 +6,13 @@
 </td>
 <td class = 'mist rightCol'>
 <div class = 'stat'><span class = 'statHeader'>Classpect:</span> Scout of Mist</div>
-<div class = 'stat'><span class = 'statHeader'>Specibus:</span> </div>
-<div class = 'stat'><span class = 'statHeader'>Favorite Weapon:</span> </div>
+<div class = 'stat'><span class = 'statHeader'>Specibus:</span> Bombkind</div>
+<div class = 'stat'><span class = 'statHeader'>Favorite Weapon:</span> Yes</div>
 <div class = 'stat'><span class = 'statHeader'>Land:</span> LOWAE</div>
-<div class = 'stat'><span class = 'statHeader'>Speciality:</span> chaos</div>
+<div class = 'stat'><span class = 'statHeader'>Speciality:</span> memes</div>
 <div class = 'stat'><span class = 'statHeader'>Join Date:</span> February 24, 2020</div>
 <div class = 'mainText'>
-<p>EE: wl is also here, causing chaos and doing code things!</p>
+<p>EE: wl is also here, causing chaos and doing code things! WL: Can confirm</p>
 <br>
 
 </div></td>
