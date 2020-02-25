@@ -99,7 +99,7 @@ class Session {
         grabSpecialCases();
         //logger.info(" I think tick is $numTicks and activated npcs is $_activatedNPCS");
         //previousTag.makeCurrent();
-        return new List.from(_activatedNPCS); //don't let ppl have access to original list they might mod it
+        return new List.from(_actsession.dartivatedNPCS); //don't let ppl have access to original list they might mod it
     }
 
     void deactivateNPC(GameEntity npc) {

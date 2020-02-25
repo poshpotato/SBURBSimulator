@@ -47,6 +47,25 @@ class Moon extends Land {
       this.processConsort();
 
   }
+  //todo kazoo is this a thing
+    Moon.voidFromWeightedThemes(Ring this._queensRing, String name, Map<Theme, double> themes, Session session, Aspect a, this.id, this.palette) {
+      //session.logger.info("DEBUG DESTROY MOON: making moon $name");
+      //override land of x and y. you are named Prospit/derse/etc
+      this.name = name;
+      this.session = session;
+
+      this.setThemes(themes);
+      this.processThemes(session.rand);
+
+      this.smells = this.getTypedSubList<SmellFeature>(FeatureCategories.SMELL);
+      this.sounds = this.getTypedSubList<SoundFeature>(FeatureCategories.SOUND);
+      this.feels = this.getTypedSubList<AmbianceFeature>(FeatureCategories.AMBIANCE);
+      setHP();
+
+      this.moonQuestChains = this.getTypedSubList<MoonQuestChainFeature>(FeatureCategories.MOON_QUEST_CHAIN).toList();
+      this.processConsort();
+
+    }
 
   Carapace get king {
 
