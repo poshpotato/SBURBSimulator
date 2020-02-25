@@ -67,8 +67,8 @@ class VoidSession extends Session {
         SimController.instance.currentSessionForErrors = this;
         changeCanonState(this, getParameterByName("canonState",null));
         //red miles are way too common and also dead sessions are special
-        /*prospit.destroyRing();
-        derse.destroyRing();*/
+        //prospit.destroyRing();
+        //derse.destroyRing();
         if (doNotRender == true) {
             intro();
         } else {
