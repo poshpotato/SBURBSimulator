@@ -236,9 +236,7 @@ class VoidSession extends Session {
 
     @override
     void makeGuardians() {
-        for(Player p in players){
-            p.makeGuardian();
-        }
+        //nope
     }
 
     /*@override
