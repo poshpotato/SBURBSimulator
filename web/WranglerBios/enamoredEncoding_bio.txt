@@ -12,6 +12,7 @@
 <div class = 'stat'><span class = 'statHeader'>Speciality:</span> Enabling poor decisions</div>
 <div class = 'stat'><span class = 'statHeader'>Join Date:</span> February 24, 2020</div>
 <div class = 'mainText'>
+<p>hello, it's your favorite rogue of light here, ee/kazoo!! i'm here to make everything that is bad worse.</p>
 <br>
 <p>i bring to the table an overuse of exclamation points, a knowledge of coding that dates back to sophomore-year compsci, and photoshop.<p>
 <br>
