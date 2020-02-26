@@ -14,6 +14,9 @@ class VoidSession extends Session {
     @override
     bool noReckoning = false;
 
+    /*@override
+    Battlefield battlefield = null;*/ //this doesn't seem to change anything
+
     Player metaPlayer;
     Land currentLand;
     VoidSession(int sessionID): super(sessionID) {
