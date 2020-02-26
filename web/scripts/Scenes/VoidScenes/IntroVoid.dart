@@ -215,7 +215,7 @@ class IntroVoid extends IntroScene {
   List<PlusMinusConversationalPair> getEnterPair() {
     List<PlusMinusConversationalPair> possible = new List<PlusMinusConversationalPair>();
     //generic
-    possible.add(new PlusMinusConversationalPair(["Hey, I am finally in the medium!", "Hey, I'm in the medium!", "Hey! I'm finally in!", "Hey. I'm in.", "Hey! I made it in!"], ["Oh, cool, how did you get in?","What did you do?","What did you put in your sprite?", "Really? What did you do?"],["About time! Tell me what you did!","Fucking finally. Where are you? What did you do?"]));
+    possible.add(new PlusMinusConversationalPair(["Hey, I am finally in the medium!", "Hey, I'm in the medium!", "Hey! I'm finally in!", "Hey. I'm in.", "Hey! I made it in!"], ["Oh, cool, how did you get in?","What did you do?","Nice", "Really? What did you do?"],["About time! Tell me what you did!","Fucking finally. Where are you? What did you do?"]));
 
     //relationship specific
     //possible.add(new PlusMinusConversationalPair(["I am finally in the medium!", "Hey, I'm in the medium!", "I'm finally in!"], ["..."],["I'm already playing a game, asshole.","Hell no, I don't want to play whatever shitty game you're talking about."]));
@@ -343,7 +343,7 @@ class IntroVoid extends IntroScene {
 
   //i prototyped my kernel with a x. wait, isn't that....   long story.  ...
   List<PlusMinusConversationalPair> getSpritePair() {
-    List<PlusMinusConversationalPair> possible1 = new List<PlusMinusConversationalPair>();
+    /*List<PlusMinusConversationalPair> possible1 = new List<PlusMinusConversationalPair>();
     List<PlusMinusConversationalPair> possible2 = new List<PlusMinusConversationalPair>();
 
     List<String> intros = <String>["The glowy thingy dodged everything I threw at it except for a ${player.object_to_prototype.name}.", "Would you believe that I did NOT mean for a ${player.object_to_prototype.name}  to fall into the seizure thingy?","Long story short, a ${player.object_to_prototype.name} fell into the kernel thingy.","I prototyped my kernelsprite with a ${player.object_to_prototype.name}.", "I chucked a ${player.object_to_prototype.name} into the seizure kernel."];
@@ -397,7 +397,7 @@ class IntroVoid extends IntroScene {
 
     //interest specific
     //possible.add(new PlusMinusConversationalPair(["I am finally in the medium!", "Hey, I'm in the medium!", "I'm finally in!"], ["..."],["I'm already playing a game, asshole.","Hell no, I don't want to play whatever shitty game you're talking about."]));
-    return <PlusMinusConversationalPair>[rand.pickFrom(possible1), rand.pickFrom(possible2)];
+    return <PlusMinusConversationalPair>[rand.pickFrom(possible1), rand.pickFrom(possible2)];*/
   }
 
 
@@ -412,42 +412,14 @@ class IntroVoid extends IntroScene {
     return "";
   }
   String corruptedSprite(){
-    if(this.player.sprite.corrupted ){
-      return "There is ...something very, very wrong about the " + this.player.sprite.htmlTitle();
-    }
     return "";
   }
   String changeBoggle(){
-    if(this.player.aspect == Aspects.BLOOD){
-      return " They boggle vacantly at the " + this.player.land.name + ". ";
-    }else if(this.player.aspect == Aspects.MIND){
-      return " They ogle at the " + this.player.land.name + ". ";
-    }else if(this.player.aspect == Aspects.RAGE){
-      return " They glare with bafflement at the " + this.player.land.name + ". ";
-    }else if(this.player.aspect == Aspects.TIME){
-      return " They are very confused by the " + this.player.land.name + ". ";
-    }else if(this.player.aspect == Aspects.VOID){
-      return " They stare blankly at the " + this.player.land.name + ". ";
-    }else if(this.player.aspect == Aspects.HEART){
-      return " They run around excitedly in the " + this.player.land.name + ". ";
-    }else if(this.player.aspect == Aspects.BREATH){
-      return " They grin excitedly at the " + this.player.land.name + ". ";
-    }else if(this.player.aspect == Aspects.LIGHT){
-      return " They stare at the " + this.player.land.name + " with unrestrained curiosity. ";
-    }else if(this.player.aspect == Aspects.SPACE){
-      return " They do not even understand the " + this.player.land.name + ". ";
-    }else if(this.player.aspect == Aspects.HOPE){
-      return " They are enthused about the " + this.player.land.name + ". ";
-    }else if(this.player.aspect == Aspects.LIFE){
-      return " They are obviously pleased with " + this.player.land.name + ". ";
-    }else if(this.player.aspect == Aspects.DOOM){
-      return " They stare with trepidation at the " + this.player.land.name + ". ";
-    }
-    return  "They boggle vacantly at the " + this.player.land.name + ". ";
+    return  "They boggle vacantly at the lifeless " + this.player.land.name + ". ";
   }
   String changePrototyping(Element div){
     String ret = "";
-    if(this.player.object_to_prototype.getStat(Stats.POWER) > 100*Stats.POWER.coefficient && rand.nextDouble() > .8){
+    /*if(this.player.object_to_prototype.getStat(Stats.POWER) > 100*Stats.POWER.coefficient && rand.nextDouble() > .8){
       session.logger.info("replacing prototyping for ${player.object_to_prototype} with power ${player.object_to_prototype.getStat(Stats.POWER)}");
       String divID = (div.id);
       // String canvasHTML = "<br><canvas id='canvaskernel" + divID+"' width='" +canvasWidth.toString() + "' height="+canvasHeight.toString() + "'>  </canvas>";
@@ -480,7 +452,7 @@ class IntroVoid extends IntroScene {
       this.player.object_to_prototype.player = true;
       this.player.object_to_prototype.helpPhrase = " is interested in trying to figure out how to play the game, since but for shenanigans they would be playing it themselves.";
 
-    }
+    }*/
     appendHtml(div, ret);
     return "";
   }
