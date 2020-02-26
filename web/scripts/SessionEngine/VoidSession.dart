@@ -189,8 +189,8 @@ class VoidSession extends Session {
             double special = rand.nextDouble();
             List<Player> replayer = getReplayers(this);
             if (replayer.isEmpty) {
-                this.players.add(randomSpacePlayer(this));
-                this.players.add(randomTimePlayer(this));
+                //this.players.add(randomSpacePlayer(this));
+                //this.players.add(randomTimePlayer(this));
                 for (int i = 2; i < numPlayers; i++) {
                     this.players.add(randomPlayer(this));
                 }
