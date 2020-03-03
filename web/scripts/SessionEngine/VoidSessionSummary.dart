@@ -38,7 +38,7 @@ class VoidSessionSummary extends SessionSummary {
     summary.setBoolStat("choseGodTier", session.stats.choseGodTier);
     summary.setBoolStat("won", session.stats.won);
     summary.ghosts = session.afterLife.ghosts;
-    summary.metaPlayer = session.metaPlayer.htmlTitleBasic();
+    //summary.metaPlayer = session.metaPlayer.htmlTitleBasic();
     summary.setNumStat("sizeOfAfterLife", session.afterLife.ghosts.length);
     summary.setBoolStat("heroicDeath", session.stats.heroicDeath);
     summary.setBoolStat("justDeath", session.stats.justDeath);
