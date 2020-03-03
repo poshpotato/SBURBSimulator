@@ -4,8 +4,8 @@ import "../Lands/Quest.dart";
 import "../Lands/Reward.dart";
 import "VoidSessionSummary.dart";
 import "dart:html";
-import "../Controllers/Misc/DeadSimController.dart";
 import "../Lands/FeatureTypes/EnemyFeature.dart";
+import "../Controllers/Misc/VoidSimController.dart";
 import 'dart:async';
 import 'dart:html';
 //only one player, player has no sprite, player has DeadLand, and session has 16 (or less) subLands.
@@ -14,8 +14,10 @@ class VoidSession extends Session {
     @override
     bool noReckoning = false;
 
-    /*@override
-    Battlefield battlefield = null;*/ //this doesn't seem to change anything
+    @override
+    void setupBattlefield(){
+        battlefield.planetsplode(new GameEntity(null, null));
+    }
 
     Player metaPlayer;
     Land currentLand;
@@ -253,11 +255,11 @@ class VoidSession extends Session {
     //unlike regular sessions there is no way to fail this.
     @override
     Session initializeCombinedSession() {
-        logger.info("initing a Dead Combo");
+        logger.info("initing a Void Combo");
 
         this.aliensClonedOnArrival = <Player>[]; //PROBABLY want to do this.
         List<Player> living = findLiving(this.players);
-        living.add((this as DeadSession).metaPlayer);
+        living.add((this as VoidSession).metaPlayer);
         //nobody is the leader anymore.
         Session newSession = new Session(this.rand.nextInt(),true); //Math.seed);  //this is a real session that could have gone on without these new players.
         newSession

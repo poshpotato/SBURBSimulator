@@ -24,10 +24,10 @@ Future<Null> main() async {
 
 
   new VoidStoryController(); //will set this as SimController's instance variable.
-  SimController.instance.storyElement.style.backgroundColor = "grey";
+  /*SimController.instance.storyElement.style.backgroundColor = "grey";
   //querySelector("#links").style.backgroundColor = "grey";
   querySelector("#debug").style.backgroundColor = "grey";
-  querySelector("#charSheets").style.backgroundColor = "grey";
+  querySelector("#charSheets").style.backgroundColor = "grey";*/
   if(getParameterByName("seed",null) != null){
     // Math.seed = getParameterByName("seed");  //TODO replace this somehow
     SimController.instance.initial_seed = int.parse(getParameterByName("seed",null));
