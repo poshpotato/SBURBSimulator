@@ -149,9 +149,9 @@ bool printCorruptionMessage(Session session, ErrorEvent e) {
     bool spacebug = true;
     if(session.players.length > 1) {
         Player space = findAspectPlayer(session.players, Aspects.SPACE);
-        spacebug = space == null;
+        spacebug = space == null && !(session is VoidSession);
         Player time = findAspectPlayer(session.players, Aspects.TIME);
-        timeBug = time == null;
+        timeBug = time == null && !(session is VoidSession);
     }
     if (session.stats.crashedFromPlayerActions) {
         appendHtml(story, "<BR>ERROR: SESSION CORRUPTION HAS REACHED UNRECOVERABLE LEVELS. HORRORTERROR INFLUENCE: COMPLETE.");

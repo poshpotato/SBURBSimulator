@@ -194,7 +194,8 @@ class VoidSession extends Session {
             if (replayer.isEmpty) {
                 //this.players.add(randomSpacePlayer(this));
                 //this.players.add(randomTimePlayer(this));
-                for (int i = 2; i < numPlayers; i++) {
+                //no spacetime baybee!!
+                for (int i = 0; i < numPlayers; i++) {
                     this.players.add(randomPlayer(this));
                 }
 
@@ -248,11 +249,6 @@ class VoidSession extends Session {
     String convertPlayerNumberToWords() {
         return "ONE";
     }*/
-
-    @override
-    void randomizeEntryOrder() {
-        //does nothing.
-    }
 
     //unlike regular sessions there is no way to fail this.
     @override
