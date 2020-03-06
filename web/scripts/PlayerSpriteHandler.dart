@@ -108,6 +108,9 @@ class PlayerSpriteHandler {
                 await drawWhateverFuture(canvas, "/Bodies/face${player.baby}.png");
             }
         }
+        if (crab) {
+            await drawWhateverFuture(canvas, "/Bodies/crabface.png");
+        }
         await hair(canvas, player);
         if (player.isTroll) { //wings before sprite
             await fin1(canvas, player);

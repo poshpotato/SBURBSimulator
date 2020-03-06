@@ -133,6 +133,7 @@ void sbahjMode(Session session){
 		}
 	}
 
+
 	if (getParameterByName("playerCrowd", null) != null) {
 		///this is handled in session.dart. Trust me, its easier.
 	}
@@ -221,6 +222,11 @@ void sbahjMode(Session session){
 
 	if(getParameterByName("honk",null)  == ":o)"){
 		fridgeQuest(session);
+	}
+
+	if(getParameterByName("crab", null) == "crab"){
+		crabTime(session);
+		//window.alert("TIME FOR CRAB");
 	}
 
 	if(getParameterByName("shenanigans",null)  == "temporal"){
@@ -895,6 +901,12 @@ void fridgeQuest(Session session){
 }
 
 
+void crabTime(Session session){
+	var player = blankPlayerNoDerived(session);
+	session612IndexToTroll(session,player, 0);
+	copyPlayersFromTemplate(session,player);
+		crab = true;
+}
 
 
 //everyone replaced by vriska. thief of space and thief of time.
@@ -1062,6 +1074,18 @@ void session420(Session session){
 		guardian.mylevels = getLevelArray(guardian);
 	}
 
+	crabTime(session);
+	for(num i = 0; i<session.players.length;i++){
+		var player = session.players[i];
+		var guardian = player.guardian;
+		player.relationships = [];
+		guardian.relationships = [];
+		var guardians = getGuardiansForPlayers(session.players);
+		guardian.generateRelationships(guardians);
+		player.generateRelationships(session.players);
+		player.mylevels = getLevelArray(player);
+		guardian.mylevels = getLevelArray(guardian);
+	}
 
 }
 

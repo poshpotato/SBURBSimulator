@@ -102,6 +102,7 @@ class Session {
         return new List.from(_activatedNPCS); //don't let ppl have access to original list they might mod it
     }
 
+
     void deactivateNPC(GameEntity npc) {
         npc.active = false;
         _activatedNPCS.remove(npc);
@@ -1254,6 +1255,11 @@ class Session {
         if (getParameterByName("nepeta", null) == ":33") {
             document.title = "NepetaQuest by jadedResearcher";
         }
+
+        if (getParameterByName("crab", null) == "crab") {
+            document.title = "CRAB CRAB CRAB CRAB CRAB";
+        }
+
         if (session_id == 33) {
             document.title = "NepetaQuest by jadedResearcher";
             SimController.instance.storyElement.appendHtml(" <a href = 'index2.html?seed=${getRandomSeed()}&nepeta=:33'>The furryocious huntress makes sure to bat at this link to learn a secret!</a>", treeSanitizer: NodeTreeSanitizer.trusted);

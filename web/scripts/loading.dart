@@ -193,6 +193,9 @@ dynamic loadOther(Session session, String skipInit){
 			loadImage(session,"/Bodies/face3.png",skipInit);
 			loadImage(session,"/Bodies/face4.png",skipInit); //wait, aren't there onyl 3 possible faces??? oh god
 	}
+	if(crab){
+		loadImage(session,"/Bodies/crabface.png",skipInit);
+	}
 
 	loadImage(session,"charSheet.png", skipInit);
 	loadImage(session,"Rewards/no_reward.png", skipInit);

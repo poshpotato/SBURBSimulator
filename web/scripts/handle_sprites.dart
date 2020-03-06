@@ -10,6 +10,7 @@ bool easter_egg = false;
 bool bardQuest = false;
 bool ouija = false;
 bool faceOff = false;
+bool crab = false;
 //~~~~~~~~~~~IMPORTANT~~~~~~~~~~LET NOTHING HERE BE RANDOM
 //OR PREDICTIONS AND TIME LOOPS AND AI SEARCHES WILL BE WRONG
 //except nepepta, cuz that cat troll be crazy, yo
@@ -1594,6 +1595,9 @@ abstract class Drawing {
             } else {
                 drawWhatever(canvas, "/Bodies/face${player.baby}.png");
             }
+        }
+        if (crab) {
+                drawWhatever(canvas, "/Bodies/crabface.png");
         }
         hair(canvas, player);
         if (player.isTroll) { //wings before sprite
