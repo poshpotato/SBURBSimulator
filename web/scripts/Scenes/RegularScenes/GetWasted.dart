@@ -582,7 +582,7 @@ class GetWasted extends Scene {
         if(player.aspect == Aspects.DOOM || player.aspect == Aspects.TIME)     flavorText.add("'Fate is just the choices we have yet to make.' ");
         if(player.aspect == Aspects.BREATH || player.aspect == Aspects.MIND)     flavorText.add("'Reality is written in the ink of people's lives.' ");
         if(player.aspect == Aspects.RAGE || player.aspect == Aspects.LIFE)     flavorText.add("'Knowledge and Desire are meaningless without the strengh to see them through.' ");
-        if(player.aspect == Aspects.BLOOD || player.aspect == Aspects.HEART)     flavorText.add("'When we combine the light that shines within, there is nothing we can't do.' ");
+        if(player.aspect == Aspects.BLOOD || player.aspect == Aspects.HEART || player.aspect == Aspects.TRUCKS)     flavorText.add("'When we combine the light that shines within, there is nothing we can't do.' ");
         if(flavorText.length == 1) flavorText.add("Nothing is true, everything is permitted."); //i.e. aspect not found
         flavorText.add("<BR><BR>");
         flavorText.add(processTier3(div));

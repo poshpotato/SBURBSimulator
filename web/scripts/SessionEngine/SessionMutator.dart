@@ -20,6 +20,7 @@ class SessionMutator {
     bool timeField = false; //means time player will be replacing their past self. basically 100% of time's effect.
     bool spaceField = false; //exclusively controls combo endings .
     bool dreamField = false; //alchemy doesn't consume items, alchemy can happen as many times as you want.
+    bool trucksField = false;
 
     @override
     String toString() {
@@ -37,6 +38,7 @@ class SessionMutator {
         if(timeField) ret = "$ret time";
         if(spaceField) ret = "$ret space";
         if(dreamField) ret = "$ret dream";
+        if(trucksField) ret = "$ret trucks";
 
         return ret;
     }
@@ -646,6 +648,15 @@ class SessionMutator {
         //first added is super fucking high priority
         //and second is added to the revive list. so they can choose to alchemy instead of revive their friends.
        return ret;
+    }
+
+    String trucks(Session s, Player activatingPlayer) {
+        effectsInPlay ++;
+        s.logger.info("AB: Huh. Looks like a ${activatingPlayer.title()} is going at it.");
+        trucksField = true;
+        String ret = "The ${activatingPlayer.htmlTitle()} hangs in a field of glowing code. It's so beautiful you could cry. They alter the very fabric of reality to allow everyone to see that beauty in each other.";
+        return ret;
+
     }
 
     //you NEED a div or this won't fucking work. Just accept this.

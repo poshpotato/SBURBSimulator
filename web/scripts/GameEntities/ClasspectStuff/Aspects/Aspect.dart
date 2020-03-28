@@ -19,6 +19,7 @@ import "Void.dart";
 import "Dream.dart";
 import "Sauce.dart";
 import "Juice.dart";
+import "Trucks.dart";
 
 abstract class Aspects {
     static Aspect SPACE;
@@ -37,6 +38,7 @@ abstract class Aspects {
     static Aspect LAW;
     static Aspect SAUCE; //just shogun
     static Aspect JUICE; //everyone but sb
+    static Aspect TRUCKS;
 
     static Aspect NULL;
 
@@ -57,6 +59,7 @@ abstract class Aspects {
         LAW = new Law(14);
         SAUCE = new Sauce(13);
         JUICE = new Juice(15); //sudden terror, did i make sure extension bytes work with aspects?
+        TRUCKS = new Trucks(16);
 
         NULL = new Aspect(255, "Null", isInternal:true);
     }
