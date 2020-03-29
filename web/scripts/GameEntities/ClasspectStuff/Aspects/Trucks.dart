@@ -50,22 +50,22 @@ class Trucks extends Aspect {
   List<String> handles = new List<String>.unmodifiable(<String>["Trucker", "Teaser", "Timer", "Teller", "Tamer", "Tide", "Tone"]);
 
   @override
-  List<String> fraymotifNames = new List<String>.unmodifiable(<String>["Trucks", "Axles", "Chain", "Wheel", "Gas", "Awakening", "Ichorial", "Friendship", "Trusting", "Clotting", "Union", "Bleeding", "Team", "Transfusion", "Pulse", "Sanguine", "Positive", "Negative", "Cruor", "Vim", "Chorus", "Iron", "Ichorial", "Fever", "Heat"]);
+  List<String> fraymotifNames = new List<String>.unmodifiable(<String>["Trucks", "Axles", "Chain", "Wheel", "Gas", "Awakening", "Jam", "Friendship", "Bop", "Engine", "Union", "Emotional", "Passionate", "Close", "Understanding", "Intimate", "Positive", "Negative", "Gear", "Bed", "Wheel", "Iron", "Bop", "Exhaust", "Heat"]);
 
   @override
   String denizenSongTitle = "Jam";
 
   @override
-  String denizenSongDesc = " A sour note is produced. It's the one Agitation plays to make its audience squirm. The OWNER is strengthened and healed. The ENEMY is weakened and hurt. And that is all there is to say on the matter. ";
+  String denizenSongDesc = " A rumbling note is produced. It's the one Pining plays to remember its past. The OWNER is strengthened and healed. The ENEMY is weakened and hurt. And that is all there is to say on the matter. ";
 
   @override
-  List<String> symbolicMcguffins = ["blood","bond", "friendship", "ties", "pulse", "chain", "ocean"];
+  List<String> symbolicMcguffins = ["blood","passion", "hug", "understanding", "blush", "flex", "muscle"];
 
   @override
-  List<String> physicalMcguffins = ["blood","photo album", "friendship bracelet", "string", "chain", "manacle", "toy army"];
+  List<String> physicalMcguffins = ["truck","wheel", "friendship bracelet", "string", "chain", "manacle", "toy army"];
 
   @override
-  List<String> denizenNames = new List<String>.unmodifiable(<String>['Blood', 'Hera', 'Hestia', 'Bastet', 'Bes', 'Vesta', 'Eleos', 'Sanguine', 'Medusa', 'Frigg', 'Debella', 'Juno', 'Moloch', 'Baal', 'Eusebeia', 'Horkos', 'Homonia', 'Harmonia', 'Philotes']);
+  List<String> denizenNames = new List<String>.unmodifiable(<String>['Truck', 'Hera', 'Hestia', 'Bastet', 'Bes', 'Vesta', 'Eleos', 'Sanguine', 'Medusa', 'Frigg', 'Debella', 'Juno', 'Moloch', 'Baal', 'Eusebeia', 'Horkos', 'Homonia', 'Harmonia', 'Philotes']);
 
 
   @override
@@ -73,7 +73,6 @@ class Trucks extends Aspect {
   void initializeItems() {
     items = new WeightedList<Item>()
       ..add(new Item("Mystical Vial of Blood",<ItemTrait>[ItemTraitFactory.GLASS,ItemTraitFactory.CALMING, ItemTraitFactory.ASPECTAL, ItemTraitFactory.HEALING],shogunDesc: "Vial of Not-ABs Oil"))
-    //shitty fanfic, you'll always be in my blood pusher.
       ..add(new Item("Bananaphone",<ItemTrait>[ItemTraitFactory.EDIBLE,ItemTraitFactory.CALMING, ItemTraitFactory.ASPECTAL, ItemTraitFactory.FUNNY], abDesc: "Really? Yet another in-joke nobody will ever get? Good work, 'oh mighty creator'. ",shogunDesc: "Yellow Respect Device"))
 
       ..add(new Item("Friendship Bracelet",<ItemTrait>[ItemTraitFactory.CLOTH,ItemTraitFactory.CALMING, ItemTraitFactory.ASPECTAL, ItemTraitFactory.HEALING, ItemTraitFactory.CHAIN],shogunDesc: "Soul Binding Wrist Shackle"))
