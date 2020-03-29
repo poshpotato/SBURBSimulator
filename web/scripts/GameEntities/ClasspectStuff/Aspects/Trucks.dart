@@ -26,20 +26,19 @@ class Trucks extends Aspect {
   double difficulty = 0.0;
 
   @override
-  //kazoo todo
   AspectPalette palette = new AspectPalette()
-    ..accent = "#993300"
-    ..aspect_light = '#BA1016'
-    ..aspect_dark = '#820B0F'
-    ..shoe_light = '#381B76'
-    ..shoe_dark = '#1E0C47'
-    ..cloak_light = '#290704'
-    ..cloak_mid = '#230200'
-    ..cloak_dark = '#110000'
-    ..shirt_light = '#3D190A'
-    ..shirt_dark = '#2C1207'
-    ..pants_light = '#5C2913'
-    ..pants_dark = '#4C1F0D';
+    ..accent = "#1b25e4"
+    ..aspect_light = '#ff0606'
+    ..aspect_dark = '#ff0606'
+    ..shoe_light = '#dbdcf7'
+    ..shoe_dark = '#c7c7f3'
+    ..cloak_light = '#2751bc'
+    ..cloak_mid = '#0b077c'
+    ..cloak_dark = '#030a20'
+    ..shirt_light = '#ab3e18'
+    ..shirt_dark = '#892810'
+    ..pants_light = '#842d20'
+    ..pants_dark = '#5e150d';
 
   @override
   List<String> landNames = new List<String>.unmodifiable(<String>["Hands", "Wheels", "Care", "Proximity", "Driving", "Intimacy", "Heartbeats", "Axles", "Unions"]);
