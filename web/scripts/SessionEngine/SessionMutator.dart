@@ -20,7 +20,7 @@ class SessionMutator {
     bool timeField = false; //means time player will be replacing their past self. basically 100% of time's effect.
     bool spaceField = false; //exclusively controls combo endings .
     bool dreamField = false; //alchemy doesn't consume items, alchemy can happen as many times as you want.
-    bool trucksField = false;
+    bool trucksField = false; // truck players love to fuck, assume everyone else does too.
 
     @override
     String toString() {
@@ -655,6 +655,13 @@ class SessionMutator {
         s.logger.info("AB: Huh. Looks like a ${activatingPlayer.title()} is going at it.");
         trucksField = true;
         String ret = "The ${activatingPlayer.htmlTitle()} hangs in a field of glowing code. It's so beautiful you could cry. They alter the very fabric of reality to allow everyone to see that beauty in each other.";
+        for(int i=0; i<s.players.length; i++){
+            s.players[i].nullAllRelationships();
+            s.players[i].generateRelationships(s.players);
+            s.players[i].boostAllRelationships();
+            s.players[i].renderSelf("codTier");
+        }
+
         return ret;
 
     }
