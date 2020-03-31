@@ -895,6 +895,8 @@ class MetaPlayerHandler {
     Player jadedResearcher;
     Player authorBot;
     Player authorBotJunior;
+    Player poshPotato;
+    Player enamoredEncoding;
 
 
     List<Player> get metaPlayers {
