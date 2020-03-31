@@ -658,7 +658,7 @@ class SessionMutator {
         for(int i=0; i<s.players.length; i++){
             s.players[i].nullAllRelationships();
             s.players[i].generateRelationships(s.players);
-            s.players[i].boostAllRelationships();
+            s.players[i].boostAllRelationshipsBy(121212);
             s.players[i].renderSelf("codTier");
         }
 
