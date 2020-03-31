@@ -12,7 +12,7 @@ import 'dart:html';
 class VoidSession extends Session {
 
     @override
-    bool noReckoning = false;
+    bool noReckoning = true;
 
     @override
     void setupBattlefield(){
@@ -127,7 +127,7 @@ class VoidSession extends Session {
 
     @override
     Future<Null> reckoning() async{
-        Scene s = new VoidReckoning(this);
+        Scene s = new DeadReckoning(this);
         s.trigger(this.players);
         s.renderContent(this.newScene(s.runtimeType.toString(),));
         simulationComplete("Dead Reckoning.");
