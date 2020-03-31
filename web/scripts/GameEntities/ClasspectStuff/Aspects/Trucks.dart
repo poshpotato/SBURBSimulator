@@ -73,12 +73,12 @@ class Trucks extends Aspect {
   //future kazoo itemtraitfactory is in scripts/alchemy/trait.dart
   void initializeItems() {
     items = new WeightedList<Item>()
-//i am adding this comment so it lets me log in on the command line
-      ..add(new Item("Fireworks in the Sky",<ItemTrait>[ItemTraitFactory.EXPLODEY,ItemTraitFactory.ROMANTIC, ItemTraitFactory.ASPECTAL, ItemTraitFactory.LOUD],shogunDesc: "GROWN MEN CRY"))
-      ..add(new Item("Bananaphone",<ItemTrait>[ItemTraitFactory.EDIBLE,ItemTraitFactory.CALMING, ItemTraitFactory.ASPECTAL, ItemTraitFactory.FUNNY], abDesc: "Really? Yet another in-joke nobody will ever get? Good work, 'oh mighty creator'. ",shogunDesc: "Yellow Respect Device"))
-      ..add(new Item("Friendship Bracelet",<ItemTrait>[ItemTraitFactory.CLOTH,ItemTraitFactory.CALMING, ItemTraitFactory.ASPECTAL, ItemTraitFactory.HEALING, ItemTraitFactory.CHAIN],shogunDesc: "Soul Binding Wrist Shackle"))
-      ..add(new Item("Bonding Manacles",<ItemTrait>[ItemTraitFactory.METAL,ItemTraitFactory.RESTRAINING, ItemTraitFactory.ASPECTAL, ItemTraitFactory.HEALING,ItemTraitFactory.CHAIN, ItemTraitFactory.UNCOMFORTABLE],shogunDesc: "Handcuff with one cuff full of cigarettes"))
-      ..add(new Item("Friendship Stairs",<ItemTrait>[ItemTraitFactory.WOOD,ItemTraitFactory.IRONICFAKECOOL, ItemTraitFactory.CALMING, ItemTraitFactory.HEALING, ItemTraitFactory.ASPECTAL, ItemTraitFactory.LEGENDARY],shogunDesc: "Bloodstained Stairs",abDesc:"You push your friends down these, dunkass.")); //john wanted to push karkat down these.
+
+      ..add(new Item("Fireworks in the Sky",<ItemTrait>[ItemTraitFactory.EXPLODEY,ItemTraitFactory.ROMANTIC, ItemTraitFactory.ASPECTAL, ItemTraitFactory.LOUD],shogunDesc: "THE FOUNDING FATHERS CRY"))
+      ..add(new Item("Steering Wheel",<ItemTrait>[ItemTraitFactory.RUBBER,ItemTraitFactory.SICKNASTY, ItemTraitFactory.ASPECTAL, ItemTraitFactory.HAUNTED], shogunDesc: "Vroom vroom, motherfuckers."))
+      ..add(new Item("Rubber Bands",<ItemTrait>[ItemTraitFactory.RUBBER,ItemTraitFactory.RESTRAINING, ItemTraitFactory.ASPECTAL, ItemTraitFactory.CHARGING, ItemTraitFactory.FIDGET],shogunDesc: "Strechhhhhh", abDesc:"Stretch."))
+      ..add(new Item("Pillows",<ItemTrait>[ItemTraitFactory.FEATHER,ItemTraitFactory.COMFORTABLE, ItemTraitFactory.ASPECTAL, ItemTraitFactory.PALE,ItemTraitFactory.ROMANTIC, ItemTraitFactory.CALMING],shogunDesc: "when did this session become such a pale fuckpile?")) //shoutout to mutinyrails
+      ..add(new Item("My Muscles, My Muscles",<ItemTrait>[ItemTraitFactory.FIST,ItemTraitFactory.FLESH, ItemTraitFactory.SHOOTY, ItemTraitFactory.VALUABLE, ItemTraitFactory.ASPECTAL, ItemTraitFactory.LEGENDARY],shogunDesc: "INVOLUNTARILY FLEX")); //yknow shooty?? cause guns???????
   }
 
 
@@ -95,7 +95,7 @@ class Trucks extends Aspect {
   String activateCataclysm(Session s, Player p) {
     return s.mutator.trucks(s, p);
   }
-//kazoo todo
+//kazoo todo THE LAST THING BEFORE IT'S DONE
   @override
   void initializeThemes() {
     addTheme(new Theme(<String>["Pulse","Clots","Ichor", "Veins", "Chambers", "Arteries", "Flow"])
