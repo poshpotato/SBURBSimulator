@@ -73,7 +73,7 @@ class Trucks extends Aspect {
   //future kazoo itemtraitfactory is in scripts/alchemy/trait.dart
   void initializeItems() {
     items = new WeightedList<Item>()
-
+//i am adding this comment so it lets me log in on the command line
       ..add(new Item("Fireworks in the Sky",<ItemTrait>[ItemTraitFactory.EXPLODEY,ItemTraitFactory.ROMANTIC, ItemTraitFactory.ASPECTAL, ItemTraitFactory.LOUD],shogunDesc: "GROWN MEN CRY"))
       ..add(new Item("Bananaphone",<ItemTrait>[ItemTraitFactory.EDIBLE,ItemTraitFactory.CALMING, ItemTraitFactory.ASPECTAL, ItemTraitFactory.FUNNY], abDesc: "Really? Yet another in-joke nobody will ever get? Good work, 'oh mighty creator'. ",shogunDesc: "Yellow Respect Device"))
       ..add(new Item("Friendship Bracelet",<ItemTrait>[ItemTraitFactory.CLOTH,ItemTraitFactory.CALMING, ItemTraitFactory.ASPECTAL, ItemTraitFactory.HEALING, ItemTraitFactory.CHAIN],shogunDesc: "Soul Binding Wrist Shackle"))
