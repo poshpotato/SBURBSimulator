@@ -11,11 +11,7 @@ void main() {
 
 void displayBio() {
   String staff = getParameterByName("staff",null);
-  DateTime now = new DateTime.now();
 
-  if(now.month == 4 && now.day == 1) {
-    changeAvatar(staff);
-  }
   processShenanigans(staff);
   Element div = querySelector("#$staff");
   if(div != null) div.classes.remove("void");
@@ -64,5 +60,10 @@ void onBioLoaded(String biohtml) {
     querySelector("#askAB").onClick.listen((Event e){
       querySelector("#canon")..append(new DivElement()..text = "AB: ${text.phrase("JRheadcanon")}")..style.color ="#ff0000"..style.backgroundColor = "#888888";
     });
+  }
+  DateTime now = new DateTime.now();
+
+  if(now.month == 4 && now.day == 1) {
+    changeAvatar(staff);
   }
 }
