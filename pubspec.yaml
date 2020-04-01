@@ -13,6 +13,8 @@ dependencies:
   source_map_stack_trace: any
   archive: any
   build_config: any
+  ImageLib:
+    git: git://github.com/poshpotato/ImageLib.git
 
 
 dev_dependencies:
