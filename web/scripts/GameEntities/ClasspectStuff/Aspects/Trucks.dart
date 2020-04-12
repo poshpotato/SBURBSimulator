@@ -95,41 +95,41 @@ class Trucks extends Aspect {
   String activateCataclysm(Session s, Player p) {
     return s.mutator.trucks(s, p);
   }
-//kazoo todo THE LAST THING BEFORE IT'S DONE
-  //quest
+
   @override
   void initializeThemes() {
-    addTheme(new Theme(<String>["Pulse","Clots","Ichor", "Veins", "Chambers", "Arteries", "Flow"])
-      ..addFeature(FeatureFactory.BLOODSMELL, Feature.HIGH)
-      ..addFeature(FeatureFactory.PULSINGSOUND, Feature.HIGH)
-      ..addFeature(FeatureFactory.CREEPYFEELING, Feature.MEDIUM)
+    addTheme(new Theme(<String>["Wheels","Axles","Engines", "Exhaust", "Driving", "Cargo", "Cabs"])
+      ..addFeature(FeatureFactory.OILSMELL, Feature.HIGH)
+      ..addFeature(FeatureFactory.CLANKINGSOUND, Feature.HIGH)
+      ..addFeature(FeatureFactory.DANGEROUSFEELING, Feature.MEDIUM)
 
-      ..addFeature(new PreDenizenQuestChain("Cross the Lake", [
-        new Quest("The ${Quest.PLAYER1} finds a great lake of red. On the other side, they can see a village of ${Quest.CONSORT}s in need of their help. The ${Quest.PLAYER1} will need to find a way to cross the lake of blood if they want to give aid."),
-        new Quest("The ${Quest.PLAYER1} gets help from ${Quest.CONSORT}s on their side of the lake to build a massive boat. They put blood, sweat, tears, but mostly blood, into building the boat."),
-        new Quest("With the boat placed into the lake, the ${Quest.PLAYER1} begins their voyage across the raging rapids. They will need all the help they can get from their ${Quest.CONSORT} crewmates to reach the other side."),
-        new Quest("After hours of captaining their ship, the ${Quest.PLAYER1} arrives on the other side of the lake. It turns out they spent so long building the boat that the village fixed its own problems. A considerate ${Quest.CONSORT} hands the ${Quest.PLAYER1} a ${Quest.PHYSICALMCGUFFIN} and some boondollars in compensation.")
+      ..addFeature(new PreDenizenQuestChain("Load the Truck", [
+        new Quest("The ${Quest.PLAYER1} finds a village of ${Quest.CONSORT}s attempting to load cargo for trade in another village. The ${Quest.CONSORT}s are struggling to determine what cargo to load and enlist the aid of the ${Quest.PLAYER1}."),
+        new Quest("The ${Quest.PLAYER1} takes inventory of the cargo and decides which is the most important. The ${Quest.CONSORT}s offer their varied opinions on the process."),
+        new Quest("The ${Quest.PLAYER1} begins loading the cargo for the consorts. They must take into account the fragility and importance of each item when loading it."),
+        new Quest("The traders take off, excited to trade their cargo. What exactly were they trading again? It doesn't matter, at any rate. A grateful ${Quest.CONSORT} hands the ${Quest.PLAYER1} a ${Quest.PHYSICALMCGUFFIN} and some boondollars in compensation.")
       ], new ItemReward(items), QuestChainFeature.playerIsHelpfulClass), Feature.WAY_LOW)
 
-      ..addFeature(new DenizenQuestChain("Unplug the Rivers", [
-        new Quest("The land is a series of candy red lakes. A wise old ${Quest.CONSORT} stops ${Quest.CONSORTSOUND}ing enough to explain that these lakes actually used to be mighty rivers, until ${Quest.DENIZEN} plugged them up with dams. Now the ${Quest.CONSORT}s can't travel or trade with other villages at all, and the land has begun to stagnate."),
-        new Quest("The ${Quest.PLAYER1} discovers the correct sequence of hydraulic pumps to activate to increase the river pressure enough to jettison away the blockage in a geyser of candy red. The first river begins to flow, and the local ${Quest.CONSORT}s begin resuming trade activities.   "),
-        new Quest("As the ${Quest.PLAYER1} goes around unplugging each river in turn, they begin to notice more and more debris among the candy red flow. Is ${Quest.DENIZEN} conspiring to reclog the rivers? "),
-        new DenizenFightQuest("It is time for the ${Quest.PLAYER1}  to finally face the ${Quest.DENIZEN}. The rivers are too vital to the ${Quest.CONSORT}s to risk having them reclog.","The ${Quest.DENIZEN} lies slain by the ${Quest.PLAYER1}'s ${Quest.WEAPON}. The ${Quest.PLAYER1} has won! The ${Quest.CONSORT}s have a bustling trade based economy once again.","The tyranny of ${Quest.DENIZEN} continues with the defeat of the ${Quest.PLAYER1}.")
+      ..addFeature(new DenizenQuestChain("Unjam the Wheels", [
+        new Quest("The land hosts a complicated system of wheels and engines. A wise old ${Quest.CONSORT} stops ${Quest.CONSORTSOUND}ing enough to explain that it is the hero's destiny to reverse the damage to the system inflicted by ${Quest.DENIZEN}. Evidently, the wheels used to spin quickly across the land, and now they have slowed down dramatically."),
+        new Quest("The ${Quest.PLAYER1} begins to examine the wheels and the bands that connect them. It seems that each wheel represents a consort and that they must interview each consort in order to discover the connections between the wheels."),
+        new Quest("The ${Quest.PLAYER1}, unravelling the complex system, notices that some parts seem to stop after they have been examined. Is the ${Quest.DENIZEN} interfering?"),
+        new DenizenFightQuest("It is time for the ${Quest.PLAYER1}  to finally face the ${Quest.DENIZEN}. The wheel system is too complicated to be stopped again safely.","The ${Quest.DENIZEN} lies slain by the ${Quest.PLAYER1}'s ${Quest.WEAPON}. The ${Quest.PLAYER1} has won! The world's wheels spin away smoothly.","The tyranny of ${Quest.DENIZEN} continues with the defeat of the ${Quest.PLAYER1}.")
       ], new DenizenReward(), QuestChainFeature.defaultOption), Feature.WAY_LOW)
         ,  Theme.HIGH);
-    addTheme(new Theme(<String>["Chains", "Unions", "Manacles", "Bonds", "Weddings", "Rings", "Webs"])
-      ..addFeature(FeatureFactory.CLANKINGSOUND, Feature.HIGH)
-      ..addFeature(FeatureFactory.MUSICSOUND, Feature.LOW)
-      ..addFeature(FeatureFactory.CALMFEELING, Feature.LOW)
-      ..addFeature(FeatureFactory.SPIDERCONSORT, Feature.HIGH)
-      ..addFeature(FeatureFactory.SWEETSMELL, Feature.LOW)
+    addTheme(new Theme(<String>["Rubber", "Bands", "Passion", "Flexes", "Fireworks", "Tears", "Emotion"])
+      ..addFeature(FeatureFactory.LAUGHINGSOUND, Feature.HIGH)
+      ..addFeature(FeatureFactory.JAZZSOUND, Feature.LOW)
+      ..addFeature(FeatureFactory.ROMANTICFEELING, Feature.LOW)
+      ..addFeature(FeatureFactory.SNAKECONSORT, Feature.HIGH)
+      ..addFeature(FeatureFactory.SPICYSMELL, Feature.LOW)
 
-      ..addFeature(new DenizenQuestChain("Learn the Power of Teamwork", [
-        new Quest("The ${Quest.PLAYER1}  and the ${Quest.PLAYER2} are investigating a dungeon. Suddenly, a chain snaps out of nowhere and handcuffs them together. After some initial bickering, they learn the POWER OF TEAMWORK and complete the dungeon. "),
-        new Quest("The ${Quest.PLAYER1}  and the ${Quest.PLAYER2} are separated in a dungeon, and each discovers a dead end that the other can open. They use the POWER OF TEAMWORK to get to the end of the dungeon. "),
-        new DenizenFightQuest("The ${Quest.PLAYER1}  and the ${Quest.PLAYER2} trust each other to have their backs.  So when the ${Quest.DENIZEN} starts trying to turn them against each other, there is no question of believing its lies. They team up to strife the ${Quest.DENIZEN}.","Slaying the ${Quest.DENIZEN} proves the POWER OF TEAMWORK!","The ${Quest.PLAYER1} and ${Quest.PLAYER2} end up getting distracted bickering after one of the ${Quest.DENIZEN}'s slanderous barbs hits home. Whoops, their teamwork wasn't strong enough!")
+      ..addFeature(new DenizenQuestChain("Wield the Power of Love", [
+        new Quest("The ${Quest.PLAYER1}  and the ${Quest.PLAYER2} are investigating a dungeon. Suddenly, a rubber band snaps out of nowhere and ties them together. They recognize that they can use this band as a weapon in their favor."),
+        new Quest("The ${Quest.PLAYER1}  and the ${Quest.PLAYER2} are separated in a dungeon, and each find a mirror that reflects into each others rooms. Using communication and teamwork, they manage to open a lock with careful maneuvering of the mirrors."),
+        new DenizenFightQuest("The ${Quest.PLAYER1}  and the ${Quest.PLAYER2} trust each other to have their backs.  So when the ${Quest.DENIZEN} starts trying to turn them against each other, there is no question of believing its lies. They team up to strife the ${Quest.DENIZEN}.","Slaying the ${Quest.DENIZEN} proves the POWER OF TEAMWORK!","The ${Quest.PLAYER1} and ${Quest.PLAYER2} end up getting distracted bickering after one of the ${Quest.DENIZEN}'s slanderous barbs hits home. Whoops, their love wasn't strong enough!")
       ], new DenizenReward(), QuestChainFeature.twoPlayers), Feature.WAY_HIGH)
+
 
       ..addFeature(new DenizenQuestChain("Chain the Towers", [
         new Quest("The ${Quest.PLAYER1} comes across a mighty series of towers, each with chains limply hanging from their tips. A wise old ${Quest.CONSORT}s explains that before  ${Quest.DENIZEN} arrived, the chains connected each tower to each other, and facilitated trade and communication between settlements. Now the ${Quest.CONSORT}s are isolated from each other, and grow more paranoid and distrustful of strangers each generation.  The ${Quest.PLAYER1} vows to help. "),
@@ -159,10 +159,10 @@ class Trucks extends Aspect {
 
 
 
-      ..addFeature(new DenizenQuestChain("Pale Shipping Dungeon", [
+      ..addFeature(new DenizenQuestChain("Flushed Shipping Dungeon", [
         new Quest("The ${Quest.PLAYER1}  and the ${Quest.PLAYER2} seem to be a good complement. The noodly appendages of the Horror Terrors do not fail to notice this.  "),
-        new DenizenFightQuest("The ${Quest.PLAYER1}  and the ${Quest.PLAYER2} have come across a strange dungeon with a diamond symbol on the door. They ignore all common sense and venture inside. Ice cream and hankies abound. There is a couch, and a sad movie playing. Huh. Oh shit, what is ${Quest.DENIZEN} doing here!?","Slaying the ${Quest.DENIZEN} proves to be the thing that finally pushes the ${Quest.PLAYER1} and ${Quest.PLAYER2} together.","The ${Quest.PLAYER1} and ${Quest.PLAYER2} are stubbornly refusing this ship by getting their asses handed to them by the ${Denizen}.")
-      ], new PaleRomanceReward(), QuestChainFeature.twoPlayers), Feature.WAY_HIGH)
+        new DenizenFightQuest("The ${Quest.PLAYER1}  and the ${Quest.PLAYER2} have come across a strange dungeon with a heart symbol on the door. They ignore all common sense and venture inside. Flowers and chocolates abound. There is a romcom playing somewhere in the dungeon. Huh. Oh shit, what is ${Quest.DENIZEN} doing here!?","Slaying the ${Quest.DENIZEN} proves to be the thing that finally pushes the ${Quest.PLAYER1} and ${Quest.PLAYER2} together.","The ${Quest.PLAYER1} and ${Quest.PLAYER2} are stubbornly refusing this ship by getting their asses handed to them by the ${Denizen}.")
+      ], new FlushedRomanceReward(), QuestChainFeature.twoPlayers), Feature.WAY_HIGH)
         , Theme.HIGH);
 
     addTheme(new Theme(<String>["Bloodlines","Generations","Family", "Community", "Villages"])
