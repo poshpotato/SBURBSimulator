@@ -166,10 +166,10 @@ class Trucks extends Aspect {
       ], new FlushedRomanceReward(), QuestChainFeature.twoPlayers), Feature.WAY_HIGH)
         , Theme.HIGH);
 
-    addTheme(new Theme(<String>["Bloodlines","Generations","Family", "Community", "Villages"])
-      ..addFeature(FeatureFactory.CALMFEELING, Feature.HIGH)
-      ..addFeature(FeatureFactory.RUSTLINGSOUND, Feature.LOW)
-      ..addFeature(FeatureFactory.NATURESMELL, Feature.MEDIUM)
+    addTheme(new Theme(<String>["Quests","Hunger","Sympathy", "Highways", "Gas Stations"])
+      ..addFeature(FeatureFactory.CONTEMPLATATIVEFEELING, Feature.HIGH)
+      ..addFeature(FeatureFactory.WHISTLINGGSOUND, Feature.LOW)
+      ..addFeature(FeatureFactory.SWEATSMELL, Feature.MEDIUM)
 
       ..addFeature(new PostDenizenQuestChain("Connect The Villages", [
         new Quest("In the wake of the defeat of the ${Quest.DENIZEN} it becomes really how isolated the individual ${Quest.CONSORT} villages are. It is far too common for a young ${Quest.CONSORT} to never have even MET their cousins. The ${Quest.PLAYER1} resolves to fix this as soon as possible."),
