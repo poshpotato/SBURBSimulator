@@ -137,26 +137,26 @@ class Trucks extends Aspect {
         new Quest("The ${Quest.PLAYER1} has been working tirelessly to determine the ancient firework schedules for each area of the land, only to discover that their notes have been mysteriously destroyed once again. There is no getting around it, ${Quest.DENIZEN} needs to be stopped. "),
         new DenizenFightQuest("The ${Quest.PLAYER1} has tracked down ${Quest.DENIZEN}. There can be no mercy. ","The ${Quest.DENIZEN} lies slain by the ${Quest.PLAYER1}'s ${Quest.WEAPON}. The ${Quest.PLAYER1} is finally free to restore the firework signals, bringing connection and love to the land. ","The tyranny and isolation of ${Quest.DENIZEN} continues with the defeat of the ${Quest.PLAYER1}.")
       ], new DenizenReward(NPCHandler.JACK), QuestChainFeature.defaultOption), Feature.WAY_LOW)
-      //below this is the un re flavored stuff
 
-      ..addFeature(new DenizenQuestChain("Protect the Beams", [
-        new Quest("The ${Quest.PLAYER1} learns of the ${Quest.MCGUFFIN} Tower, said to hold and connect all of the planet together with its many Beams. A quaking ${Quest.CONSORT} explains that the ${Quest.DENIZEN} has besieged this tower since the dawn of time, snapping each Beam one by one, and preventing the ${Quest.CONSORT}s from communciating with other villages and risking the entire planet falling apart.  "),
-        new Quest("The ${Quest.PLAYER1} hears of a fantastical secret kept at the top of the ${Quest.MCGUFFIN} Tower. It is said that the ${Quest.DENIZEN} seeks to topple it to gain this secret. Perhaps the ${Quest.PLAYER1} is small enough to climb the tower to claim it themselves?"),
-        new Quest("The ${Quest.PLAYER1} defeats a fearsome ${Quest.DENIZEN} minion, whose death unlocks the most direct path to the ${Quest.MCGUFFIN} Tower . "),
-        new DenizenFightQuest("The ${Quest.PLAYER1} has crossed the field of roses. They blow their horn. There can be no mercy. It is time to face the ${Quest.DENIZEN}. ","The ${Quest.DENIZEN} lies slain by the ${Quest.PLAYER1}'s ${Quest.WEAPON}. The ${Quest.PLAYER1} is finally able to see what lies at the top of the ${Quest.MCGUFFIN} Tower. Oh. Huh. That's....actually kind of disappointing, actually. Oh well, at least they saved the planet, right? ","The ${Quest.MCGUFFIN} Tower is more at risk than ever before.")
+      ..addFeature(new DenizenQuestChain("Slow the Tears", [
+        new Quest("The ${Quest.PLAYER1} learns of the ${Quest.MCGUFFIN} Well, said to hold back the ${Quest.DENIZEN}'s tears from flooding the land. A quaking ${Quest.CONSORT} explains that the ${Quest.DENIZEN}'s rage is cracking the well, causing their tears to flood through the land, bumming all the consorts out.  "),
+        new Quest("The ${Quest.PLAYER1} hears of a fantastical weapon kept sunken at the bottom of the ${Quest.MCGUFFIN} Well. It is said that the ${Quest.DENIZEN}, imprisoned alongside it, seeks to escape and study it. Perhaps the ${Quest.PLAYER1} can persist through the denizens saddening tears long enough to claim it for themselves?"),
+        new Quest("The ${Quest.PLAYER1} defeats a fearsome ${Quest.DENIZEN} minion, whose death causes the a tunnel descending around the ${Quest.MCGUFFIN} Well to appear. "),
+        new DenizenFightQuest("The ${Quest.PLAYER1} has crossed the threshold. They toot their horn. There can be no mercy. It is time to face the ${Quest.DENIZEN}. ","The ${Quest.DENIZEN} lies slain by the ${Quest.PLAYER1}'s ${Quest.WEAPON}. The ${Quest.PLAYER1} is finally able to see what lies at the bottom of the ${Quest.MCGUFFIN} Well. Oh. Huh. That's....actually kind of disappointing, actually. Oh well, at least they saved the planet, right? ","The ${Quest.MCGUFFIN} Well is more at risk of collapsing than ever before.")
       ], new DenizenReward(), QuestChainFeature.defaultOption), Feature.WAY_LOW)
 
-      ..addFeature(new PostDenizenQuestChain("One Degree of Separation", [
-        new Quest("They say it can't be done, but the ${Quest.PLAYER1} is confident that they can become friends with every single ${Quest.CONSORT} on ${Quest.MCGUFFIN}book. They start small, just talking to any ${Quest.PLAYER1} that wanders by. They know they can do this!"),
-        new Quest("Oh god. Less than 10% of the ${Quest.PLAYER1} population have been friended. The ${Quest.PLAYER1} is starting to think that maybe they understimated how hard this would be. "),
-        new Quest("Oh god. It's all so simple. They see it now. Relationships are like a chain, or a web. All they need to do is find the most connected nodes and....yes. Those 6 ${Quest.CONSORT}s are all they need to indirectly gain access to the remaining 90% of the population. The ${Quest.PLAYER1} schmoozes the right few ${Quest.CONSORT}s and finally acomplishes the impossible. They now have AAAAAAAALL the friends!")
-      ], new FraymotifReward("Friend Request", "The ${Fraymotif.OWNER} has so many friends, they have to assume everyone in this fight is already in their friend list."), QuestChainFeature.playerIsSmartClass), Feature.HIGH)
+      ..addFeature(new PostDenizenQuestChain("360 Degrees of Separation", [
+        new Quest("They say it can't be done, but the ${Quest.PLAYER1} is confident that they can ship every single ${Quest.CONSORT} on ${Quest.MCGUFFIN}book. AAAAAAAALLLLLLLL of them. They start small, just setting up any ${Quest.PLAYER1}'s that wanders by on a randomly quadranted date. They know they can do this!"),
+        new Quest("Oh god. Less than 10% of the ${Quest.PLAYER1} population have been shipped. The ${Quest.PLAYER1} is starting to think that maybe they understimated how hard this would be. "),
+        new Quest("Oh god. It's all so simple. They see it now. Relationships are like a chain, or a web. All they need to do is find the most connected nodes and....yes. Those 6 ${Quest.CONSORT}s are all they need to indirectly gain access to the remaining 90% of the population. The ${Quest.PLAYER1} schmoozes the right few ${Quest.CONSORT}s and finally acomplishes the impossible. They now have AAAAAAAALL the ships!")
+      ], new FraymotifReward("Shipping party", "The ${Fraymotif.OWNER} has so many ships, they have to assume everyone in this fight is already in one of theirs."), QuestChainFeature.playerIsSmartClass), Feature.HIGH)
 
       ..addFeature(new PostDenizenQuestChain("Steal The Friends", [
-        new Quest("They say it can't be done, but the ${Quest.PLAYER1} is confident that they can become friends with every single ${Quest.CONSORT} on ${Quest.MCGUFFIN}book. They start small, just talking to any ${Quest.PLAYER1} that wanders by. They know they can do this!"),
+        new Quest("They say it can't be done, but the ${Quest.PLAYER1} is confident that they can ship every single ${Quest.CONSORT} on ${Quest.MCGUFFIN}book. AAAAAAAALLLLLLLL of them. They start small, just setting up any ${Quest.PLAYER1}'s that wanders by on a randomly quadranted date. They know they can do this!"),
         new Quest("Oh god. Less than 10% of the ${Quest.PLAYER1} population have been friended. The ${Quest.PLAYER1} is starting to think that maybe they understimated how hard this would be. "),
-        new Quest("The ${Quest.PLAYER1} decides that doing things the hard way is for chumps and just hacks into ${Quest.MCGUFFIN}book to steal all the friends. Yay, they win! They are the best! ")
+        new Quest("The ${Quest.PLAYER1} decides that doing things the hard way is for chumps and just hacks into ${Quest.MCGUFFIN}book to change their relationships to a humongous polyamory. Yay, they win! They are the best! ")
       ], new FraymotifReward("Friend Stealer", "The ${Fraymotif.OWNER} is now more popular with your friends than you are."), QuestChainFeature.playerIsSneakyClass), Feature.HIGH)
+    //below this is the un re flavored stuff
 
 
 
