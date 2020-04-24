@@ -131,11 +131,11 @@ class Trucks extends Aspect {
       ], new DenizenReward(), QuestChainFeature.twoPlayers), Feature.WAY_HIGH)
 
 
-      ..addFeature(new DenizenQuestChain("Chain the Towers", [
-        new Quest("The ${Quest.PLAYER1} comes across a mighty series of towers, each with chains limply hanging from their tips. A wise old ${Quest.CONSORT}s explains that before  ${Quest.DENIZEN} arrived, the chains connected each tower to each other, and facilitated trade and communication between settlements. Now the ${Quest.CONSORT}s are isolated from each other, and grow more paranoid and distrustful of strangers each generation.  The ${Quest.PLAYER1} vows to help. "),
-        new Quest("The ${Quest.PLAYER1} delves in dungeons until the right items are discovered to alchemize new connectors for the chains. The first set of towers are reconnected, and trade and communication immediately resumes. The local ${Quest.CONSORT}s discover that ${Quest.CONSORT}s from other villages aren't so different, after all.  Another victory against xenophobia! "),
-        new Quest("The ${Quest.PLAYER1} has been working tirelessly to hook up tower after tower, only to discover that the first tower they repaired is already broken again. There is no getting around it, ${Quest.DENIZEN} needs to be stopped. "),
-        new DenizenFightQuest("The ${Quest.PLAYER1} has tracked down ${Quest.DENIZEN}. There can be no mercy. ","The ${Quest.DENIZEN} lies slain by the ${Quest.PLAYER1}'s ${Quest.WEAPON}. The ${Quest.PLAYER1} is finally free to restore the chains, bringing peace and understanding to the land. ","The tyranny  and xenophobia of ${Quest.DENIZEN} continues with the defeat of the ${Quest.PLAYER1}.")
+      ..addFeature(new DenizenQuestChain("Set the Fireworks", [
+        new Quest("The ${Quest.PLAYER1} beholds a hold of grounded fireworks, dusty with age. A wise old ${Quest.CONSORT}s explains that before  ${Quest.DENIZEN} arrived, the fireworks were regularly sent to the sky as a communication between villages. Now the ${Quest.CONSORT}s are isolated from each other, and grow more yearnful by the day.  The ${Quest.PLAYER1} vows to help. "),
+        new Quest("The ${Quest.PLAYER1} delves in dungeons until they discover the correct timings for one cache of fireworks. The first cache is firing again, and the timekeeping and communication is restored. The local ${Quest.CONSORT}s connect with their lost brethren for the first time in their lifetimes, to much joy."),
+        new Quest("The ${Quest.PLAYER1} has been working tirelessly to determine the ancient firework schedules for each area of the land, only to discover that their notes have been mysteriously destroyed once again. There is no getting around it, ${Quest.DENIZEN} needs to be stopped. "),
+        new DenizenFightQuest("The ${Quest.PLAYER1} has tracked down ${Quest.DENIZEN}. There can be no mercy. ","The ${Quest.DENIZEN} lies slain by the ${Quest.PLAYER1}'s ${Quest.WEAPON}. The ${Quest.PLAYER1} is finally free to restore the firework signals, bringing connection and love to the land. ","The tyranny and isolation of ${Quest.DENIZEN} continues with the defeat of the ${Quest.PLAYER1}.")
       ], new DenizenReward(NPCHandler.JACK), QuestChainFeature.defaultOption), Feature.WAY_LOW)
 
       ..addFeature(new DenizenQuestChain("Protect the Beams", [
