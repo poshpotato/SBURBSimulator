@@ -151,12 +151,11 @@ class Trucks extends Aspect {
         new Quest("Oh god. It's all so simple. They see it now. Relationships are like a chain, or a web. All they need to do is find the most connected nodes and....yes. Those 6 ${Quest.CONSORT}s are all they need to indirectly gain access to the remaining 90% of the population. The ${Quest.PLAYER1} schmoozes the right few ${Quest.CONSORT}s and finally acomplishes the impossible. They now have AAAAAAAALL the ships!")
       ], new FraymotifReward("Shipping party", "The ${Fraymotif.OWNER} has so many ships, they have to assume everyone in this fight is already in one of theirs."), QuestChainFeature.playerIsSmartClass), Feature.HIGH)
 
-      ..addFeature(new PostDenizenQuestChain("Steal The Friends", [
+      ..addFeature(new PostDenizenQuestChain("Steal The Ships", [
         new Quest("They say it can't be done, but the ${Quest.PLAYER1} is confident that they can ship every single ${Quest.CONSORT} on ${Quest.MCGUFFIN}book. AAAAAAAALLLLLLLL of them. They start small, just setting up any ${Quest.PLAYER1}'s that wanders by on a randomly quadranted date. They know they can do this!"),
-        new Quest("Oh god. Less than 10% of the ${Quest.PLAYER1} population have been friended. The ${Quest.PLAYER1} is starting to think that maybe they understimated how hard this would be. "),
+        new Quest("Oh god. Less than 10% of the ${Quest.PLAYER1} population have been shipped. The ${Quest.PLAYER1} is starting to think that maybe they understimated how hard this would be. "),
         new Quest("The ${Quest.PLAYER1} decides that doing things the hard way is for chumps and just hacks into ${Quest.MCGUFFIN}book to change their relationships to a humongous polyamory. Yay, they win! They are the best! ")
-      ], new FraymotifReward("Friend Stealer", "The ${Fraymotif.OWNER} is now more popular with your friends than you are."), QuestChainFeature.playerIsSneakyClass), Feature.HIGH)
-    //below this is the un re flavored stuff
+      ], new FraymotifReward("Ship Stealer", "The ${Fraymotif.OWNER} has shipped you and all your allies already."), QuestChainFeature.playerIsSneakyClass), Feature.HIGH)
 
 
 
@@ -171,18 +170,18 @@ class Trucks extends Aspect {
       ..addFeature(FeatureFactory.WHISTLINGGSOUND, Feature.LOW)
       ..addFeature(FeatureFactory.SWEATSMELL, Feature.MEDIUM)
 
-      ..addFeature(new PostDenizenQuestChain("Connect The Villages", [
-        new Quest("In the wake of the defeat of the ${Quest.DENIZEN} it becomes really how isolated the individual ${Quest.CONSORT} villages are. It is far too common for a young ${Quest.CONSORT} to never have even MET their cousins. The ${Quest.PLAYER1} resolves to fix this as soon as possible."),
-        new Quest("The ${Quest.PLAYER1} is working hard to restore roads, track down long lost family members and generally just remind all the ${Quest.CONSORT}s that at the end of the day they are all one big happy family. "),
-        new Quest("All those hours of hard work have paid off, the individual ${Quest.CONSORT} villages have all been brought back into communication with each other. The sense of community is so strong, you could cut it with a knife. Or maybe wield it as one?")
-      ], new FraymotifReward("Community Builder", "It may take a village for the ${Fraymotif.OWNER} to kick your ass, but luckily they have several."), QuestChainFeature.playerIsHelpfulClass), Feature.HIGH)
+      ..addFeature(new PostDenizenQuestChain("Make the Journey", [
+        new Quest("In the wake of the defeat of the ${Quest.DENIZEN} it becomes really how isolated the individual ${Quest.CONSORT} villages are. No ${Quest.CONSORT} has made a journey longer than a day in generations. The ${Quest.PLAYER1} does not stand for this."),
+        new Quest("The ${Quest.PLAYER1} is working hard to restore roads to working order. Their journies get longer and longer. "),
+        new Quest("All those hours of hard work have paid off; the ${Quest.PLAYER1} has managed to visit every ${Quest.CONSORT} village in a single journey. The consorts are inspired, and several ${Quest.CONSORT} children have been inspired to make such a journey in the future.")
+      ], new FraymotifReward("Marathon", "No matter how you attempt to avoid the ${Fraymotif.OWNER} away, they'll search until they find you."), QuestChainFeature.playerIsHelpfulClass), Feature.HIGH)
 
 
-      ..addFeature(new DenizenQuestChain("Stop the Feud", [
-        new Quest("The ${Quest.PLAYER1} learns that two prominent ${Quest.CONSORT} families have been feuding for generations, despite once having been the best of friends. The land is on the verge of a civil war as uninvolved ${Quest.CONSORT}s pick a side, and everyone is suffering."),
-        new Quest("The ${Quest.PLAYER1} tries to track down the origin of the feud that leaves their land on the verge of a civil war. Nobody can point to any REASON for it to be happening. "),
-        new Quest("In a dramatic reveal, the ${Quest.PLAYER1} discovers that ${Quest.DENIZEN} is responsible for the feud. The two ${Quest.CONSORT} families never wronged each other, it's a huge misunderstanding. But how can they prove this to the feuding families? "),
-        new DenizenFightQuest("The ${Quest.PLAYER1} confronts ${Quest.DENIZEN}. The beast smuggly admits to its crimes, and claims that the proof needed lies within its hoard. Will the ${Quest.PLAYER1} be able to claim it?", "The ${Quest.DENIZEN} lies slain by the ${Quest.PLAYER1}'s ${Quest.WEAPON}. The ${Quest.PLAYER1} shows the proof to the two ${Quest.CONSORT} families, who reconcile in a dramatic shower of happy tears and ${Quest.CONSORTSOUND}ing. ","The deception of ${Quest.DENIZEN} continues with the defeat of the ${Quest.PLAYER1}.")
+      ..addFeature(new DenizenQuestChain("Make the Waystations", [
+        new Quest("The ${Quest.PLAYER1} learns that the route between two ${Quest.CONSORT} cities is run down and unusable. This makes the journey harsh and unforgiving. The cities have minimal contact now."),
+        new Quest("The ${Quest.PLAYER1} begins to create comfortable rest stops along the route, making the journey safer. A few brave consorts attempt the journey."),
+        new Quest("In a dramatic reveal, the ${Quest.PLAYER1} discovers that ${Quest.DENIZEN} destroyed the route. There used to be rest stops and regular transportation, but all of it was crushed long ago. The Denizen must be defeated!"),
+        new DenizenFightQuest("The ${Quest.PLAYER1} confronts ${Quest.DENIZEN}. The beast admits to destroying the route, and reveals that it intends to destroy the Hero's work. Will the ${Quest.PLAYER1} be able to defend themself?", "The ${Quest.DENIZEN} lies slain by the ${Quest.PLAYER1}'s ${Quest.WEAPON}. The route is safe and consorts move along it regularly. The cities are connected!","The destruction of ${Quest.DENIZEN} continues with the defeat of the ${Quest.PLAYER1}.")
       ], new DenizenReward(), QuestChainFeature.defaultOption), Feature.WAY_LOW)
         , Theme.HIGH); // end theme
   }
