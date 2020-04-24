@@ -137,6 +137,7 @@ class Trucks extends Aspect {
         new Quest("The ${Quest.PLAYER1} has been working tirelessly to determine the ancient firework schedules for each area of the land, only to discover that their notes have been mysteriously destroyed once again. There is no getting around it, ${Quest.DENIZEN} needs to be stopped. "),
         new DenizenFightQuest("The ${Quest.PLAYER1} has tracked down ${Quest.DENIZEN}. There can be no mercy. ","The ${Quest.DENIZEN} lies slain by the ${Quest.PLAYER1}'s ${Quest.WEAPON}. The ${Quest.PLAYER1} is finally free to restore the firework signals, bringing connection and love to the land. ","The tyranny and isolation of ${Quest.DENIZEN} continues with the defeat of the ${Quest.PLAYER1}.")
       ], new DenizenReward(NPCHandler.JACK), QuestChainFeature.defaultOption), Feature.WAY_LOW)
+      //below this is the un re flavored stuff
 
       ..addFeature(new DenizenQuestChain("Protect the Beams", [
         new Quest("The ${Quest.PLAYER1} learns of the ${Quest.MCGUFFIN} Tower, said to hold and connect all of the planet together with its many Beams. A quaking ${Quest.CONSORT} explains that the ${Quest.DENIZEN} has besieged this tower since the dawn of time, snapping each Beam one by one, and preventing the ${Quest.CONSORT}s from communciating with other villages and risking the entire planet falling apart.  "),
