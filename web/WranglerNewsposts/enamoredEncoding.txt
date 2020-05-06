@@ -1,2 +1,3 @@
 2020-02-24: hewwo?????
 2020-02-30: <a href="index2.html?crab=crab">time for crab.</a>
+2020-04-25: <a href="index2.html?TrucksStuck=true">trucks</a> is here. tremble before our power.

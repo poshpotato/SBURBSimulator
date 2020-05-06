@@ -67,7 +67,7 @@ class ChangeLogMemo {
         dilletantMathematician = new Wrangler("dilletantMathematician", "images/Credits/dm_icon$end", new Colour.fromStyleString("#ff0000"));
 
         poshPotato = new Wrangler("poshPotato", "images/Credits/pp_icon$end", new Colour.fromStyleString("#ff3399"));
-        enamoredEncoding = new Wrangler("enamoredEncoding", null, new Colour.fromStyleString("#f78123"));
+        enamoredEncoding = new Wrangler("enamoredEncoding", "images/Credits/kazooicon$end", new Colour.fromStyleString("#f78123"));
         wizardlyLogger = new Wrangler("wizardlyLogger", null, new Colour.fromStyleString("#000000"));
 
     }

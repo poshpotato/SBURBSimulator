@@ -2,16 +2,18 @@
 			<tr>
 				<td valign="top" class = 'bioPic'>
 					<div class = 'nameHeader'>enamoredEncoding (Kazoo)</div>
-					<img id = "enamoredEncodingAvatar" src = "images/Credits/ee.png">
+					<img id = "enamoredEncodingAvatar" src = "images/Credits/kazoo_heromode.png">
 </td>
 <td class = 'light rightCol'>
 <div class = 'stat'><span class = 'statHeader'>Classpect:</span> Rogue of Light</div>
 <div class = 'stat'><span class = 'statHeader'>Specibus:</span> WtngUtslkind, Dicekind</div>
 <div class = 'stat'><span class = 'statHeader'>Favorite Weapon:</span> Shitty Fruit Dice </div>
 <div class = 'stat'><span class = 'statHeader'>Land:</span> LOSAC</div>
-<div class = 'stat'><span class = 'statHeader'>Speciality:</span> Enabling poor decisions</div>
+<div class = 'stat'><span class = 'statHeader'>Speciality:</span> Bad Joke Mod Additions</div>
 <div class = 'stat'><span class = 'statHeader'>Join Date:</span> February 24, 2020</div>
 <div class = 'mainText'>
+<p>(avatar made by the incomparable anya originalCathexis!! find her on the farragofiction discord.)<p>
+<br>
 <p>hello, it's your favorite rogue of light here, ee/kazoo!! i'm here to make everything that is bad worse.</p>
 <br>
 <p>i bring to the table an overuse of exclamation points, a knowledge of coding that dates back to sophomore-year compsci, and photoshop.<p>
