@@ -38,7 +38,7 @@ abstract class Aspects {
     static Aspect LAW;
     static Aspect SAUCE; //just shogun
     static Aspect JUICE; //everyone but sb
-    static Aspect TRUCKS;
+    static Aspect TRUCKS; //uwu
 
     static Aspect NULL;
 
